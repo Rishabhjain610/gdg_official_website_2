@@ -1,4 +1,11 @@
+/* 
 @import "tailwindcss";
+
+
+@plugin 'tailwindcss-animate';
+
+
+
 
 :root {
   --background: #ffffff;
@@ -33,5 +40,35 @@
   100% {
     opacity: 1;
     transform: translate(-50%, -40%) scale(1);
+  }
+} */
+@import "tailwindcss";
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(240 10% 3.9%);
+}
+
+.dark {
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(0 0% 98%);
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@theme {
+  --animate-tile: tile 8s infinite;
+
+  @keyframes tile {
+    0%, 12.5%, 100%: { opacity: 1 },
+    25%, 82.5%: { opacity: 0 }
   }
 }

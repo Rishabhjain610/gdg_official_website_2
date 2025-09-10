@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+
 import { 
   IoArrowForward, 
   IoCalendarOutline, 
@@ -11,21 +12,22 @@ import {
   IoCodeSlashOutline,
   IoTrophyOutline 
 } from "react-icons/io5";
-
+import { PulseCardDemo } from "./components/PulseCardDemo";
+import { PulseCard } from "./components/PulseCard";
+import { Zap } from "lucide-react";
 const Page = () => {
   // Counter state for animation
   const [counters, setCounters] = useState({
     members: 0,
     events: 0,
-    projects: 0,
-    awards: 0
+    domains:0,
   });
 
   const stats = [
-    { key: 'members', icon: <IoPeopleOutline size={24} />, number: 500, label: "Members" },
+    { key: 'members', icon: <IoPeopleOutline size={24} />, number: 200, label: "Members" },
     { key: 'events', icon: <IoCalendarOutline size={24} />, number: 50, label: "Events" },
-    { key: 'projects', icon: <IoCodeSlashOutline size={24} />, number: 100, label: "Projects" },
-    { key: 'awards', icon: <IoTrophyOutline size={24} />, number: 25, label: "Awards" }
+    { key: 'domains', icon: <IoCodeSlashOutline size={24} />, number: 5, label: "Domains" },
+   
   ];
 
   const features = [
@@ -75,7 +77,7 @@ const Page = () => {
 
   return (
     <div className="relative text-white">
-      {/* Subtle Google Colors Gradient Background */}
+      
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-red-900/8"></div>
         <div className="absolute inset-0 bg-gradient-to-tl from-yellow-900/6 via-transparent to-green-900/8"></div>
@@ -88,7 +90,7 @@ const Page = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="text-center lg:text-left">
+          <div className="text-center mt-5 lg:text-left">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
               <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
@@ -96,20 +98,27 @@ const Page = () => {
             </div>
 
             {/* Main Heading - One Line with Google Colors */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            {/* <h1 className="text-4xl md:text-6xl lg:text-[60px] font-bold mb-6 leading-tight">
               <span className="text-blue-500">LEARN, </span>
               <span className="text-red-500">BUILD, </span>
               <span className="text-yellow-500">GROW</span>
-            </h1>
+            </h1> */}
+            <div className="overflow-hidden mb-4 sm:text-left ">
+              <h1 className="text-5xl  md:text-6xl lg:text-7xl font-bold leading-tight ">
+                <span className="text-blue-500">LEARN, </span>
+                <span className="text-red-500">BUILD, </span>
+                <span className="text-yellow-500">GROW</span>
+                
+              </h1>
+              <span className="text-4xl font-bold  leading-tight text-left">with</span>
+              
+            </div>
 
             {/* Sub Heading */}
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
-              Join the largest developer community at TSEC and unlock your potential with 
-              <span className="text-blue-400 font-semibold"> Google technologies</span>
-            </p>
-
+             
+          
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            {/* <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Link href="/events">
                 <button className="group bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
                   Join Community
@@ -121,7 +130,15 @@ const Page = () => {
                   Explore Events
                 </button>
               </Link>
+            </div> */}
+            <div className="bg-white/10 rounded-3xl w-full sm:w-[500px] p-3 py-6 sm:p-5 sm:gap-4 items-center mb-8 flex  sm:flex-row backdrop-blur-sm">
+             <img src="/Logo.png" alt="GDG TSEC Banner"  className="w-[80px] h-[40px] sm:w-[90px] sm:h-[50px] " />
+             <div className="">
+                <h1 className="text-[18px] sm:text-[25px]">Google Developer Group</h1>
+                <h1 className="text-blue-300 text-[4px]sm:text-lg">Thadomal Shahani Engineering College</h1>
+             </div>
             </div>
+            
 
             {/* Animated Stats with Background */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -154,14 +171,12 @@ const Page = () => {
                       height={80}
                       className="object-contain"
                     />
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full" />
-                    </div>
+                    
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">GDG TSEC</h3>
-                    <p className="text-blue-300 text-sm">Google Developer Groups</p>
-                    <p className="text-gray-300 text-xs">Thadomal Shahani Engineering College</p>
+                    <p className="text-white text-sm">Google Developer Group</p>
+                    <p className="text-blue-300 text-xs">Thadomal Shahani Engineering College</p>
                   </div>
                 </div>
 
@@ -214,43 +229,44 @@ const Page = () => {
         </div>
       </section>
 
-      {/* Quick Links Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              Explore our community, attend events, and connect with fellow developers
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/teams" className="group">
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 backdrop-blur-sm">
-                <div className="text-4xl mb-4">👥</div>
-                <h3 className="text-xl font-bold text-white mb-2">Meet Our Team</h3>
-                <p className="text-gray-300 text-sm">Get to know the passionate individuals driving our community forward</p>
-              </div>
-            </Link>
-
-            <Link href="/events" className="group">
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 backdrop-blur-sm">
-                <div className="text-4xl mb-4">📅</div>
-                <h3 className="text-xl font-bold text-white mb-2">Upcoming Events</h3>
-                <p className="text-gray-300 text-sm">Join our workshops, talks, and networking sessions</p>
-              </div>
-            </Link>
-
-            <Link href="/contact" className="group">
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 backdrop-blur-sm">
-                <div className="text-4xl mb-4">💬</div>
-                <h3 className="text-xl font-bold text-white mb-2">Get in Touch</h3>
-                <p className="text-gray-300 text-sm">Have questions? We'd love to hear from you</p>
-              </div>
-            </Link>
-          </div>
+      
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 text-white">
+            What is <span className="text-blue-400">GDG</span>?
+          </h1>
+          <p className="text-gray-300 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-8">
+            Google Developer Groups (GDG) are local communities of developers who are interested in Google's developer technology. Each local group is called a GDG chapter and can host a variety of technical activities for developers - from just a few people getting together to watch our latest videos, to large gatherings with demos and tech talks, to hackathons.
+          </p>
+          
+          {/* Feature Cards */}
+          {/* <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+              <div className="text-4xl mb-4">🌍</div>
+              <h3 className="text-xl font-bold text-white mb-3">Global Community</h3>
+              <p className="text-gray-300 text-sm">Connect with developers worldwide and be part of Google's global developer ecosystem.</p>
+            </div>
+            
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-bold text-white mb-3">Latest Technologies</h3>
+              <p className="text-gray-300 text-sm">Stay updated with cutting-edge Google technologies and development tools.</p>
+            </div>
+            
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+              <div className="text-4xl mb-4">🤝</div>
+              <h3 className="text-xl font-bold text-white mb-3">Collaborative Learning</h3>
+              <p className="text-gray-300 text-sm">Learn together through workshops, hackathons, and knowledge sharing sessions.</p>
+            </div>
+          </div> */}
+          <PulseCard
+      icon={<Zap />}
+      title="Lightning Fast"
+      description="Optimized for speed and performance"
+      variant="blue"
+      size="lg"
+      glowEffect={true}
+    />
         </div>
       </section>
     </div>
