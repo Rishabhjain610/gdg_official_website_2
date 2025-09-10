@@ -19,14 +19,7 @@ const VARIANTS = {
     border: "blue-500/20",
     color: "rgb(59 130 246)",
   },
-  purple: {
-    accent: "purple-500",
-    gradient: "from-purple-500/20 to-purple-500/0",
-    shine:
-      "205deg, transparent 0deg, hsl(280deg 95% 39%) 20deg, hsl(280deg 100% 85% / 0.3) 280deg",
-    border: "purple-500/20",
-    color: "rgb(168 85 247)",
-  },
+
   amber: {
     accent: "amber-500",
     gradient: "from-amber-500/20 to-amber-500/0",
@@ -103,7 +96,7 @@ export function PulseCard({
       whileHover={interactive ? { scale: hoverScale } : undefined}
       transition={{ duration: 0.3, ease: "easeInOut", type: "keyframes" }}
       className={cn(
-        "group relative z-30 cursor-pointer overflow-hidden rounded-2xl",
+        "group relative z-30 cursor-pointer overflow-hidden rounded-2xl flex flex-col items-center text-center",
         sizeConfig.padding,
         // Light mode styles
         "bg-white/80 before:bg-gradient-to-b before:from-white/5 before:to-white/20 before:backdrop-blur-3xl",
@@ -150,13 +143,13 @@ export function PulseCard({
 
       {/* Icon */}
       <IconWrapper
-        className="relative z-50 table rounded-xl p-2.5"
+        className="relative z-50 flex items-center justify-center rounded-xl p-2 text-center"
         whileHover={interactive ? { scale: 1.1 } : undefined}
         transition={{ duration: 0.3, ease: "easeInOut", type: "keyframes" }}
       >
         <span
           className={cn(
-            "absolute inset-[4.5px] rounded-[inherit]",
+            "absolute inset-0 items-center justify-center rounded-[inherit]",
             "bg-gradient-to-b from-black/5 to-black/10 backdrop-blur-3xl",
             "dark:from-white/10 dark:to-white/5",
             "transition-all duration-300",
