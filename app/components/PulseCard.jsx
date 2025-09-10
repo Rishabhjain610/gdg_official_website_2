@@ -15,7 +15,7 @@ const VARIANTS = {
     accent: "blue-500",
     gradient: "from-blue-500/20 to-blue-500/0",
     shine:
-      "205deg, transparent 0deg, hsl(220deg 95% 39%) 20deg, hsl(220deg 100% 85% / 0.3) 280deg",
+      "205deg, transparent 90deg, hsl(220deg 95% 39%) 20deg, hsl(120deg 100% 85% / 0.3) 280deg",
     border: "blue-500/20",
     color: "rgb(59 130 246)",
   },
@@ -106,10 +106,10 @@ export function PulseCard({
         "group relative z-30 cursor-pointer overflow-hidden rounded-2xl",
         sizeConfig.padding,
         // Light mode styles
-        "bg-white/80 before:bg-linear-to-b before:from-white/5 before:to-white/20 before:backdrop-blur-3xl",
-        "after:bg-linear-to-b after:from-transparent after:via-transparent after:to-white/20",
+        "bg-white/80 before:bg-gradient-to-b before:from-white/5 before:to-white/20 before:backdrop-blur-3xl",
+        "after:bg-gradient-to-b after:from-transparent after:via-transparent after:to-white/20",
         // Dark mode styles
-        "dark:bg-black/5 dark:before:bg-linear-to-b dark:before:from-black/5 dark:before:to-black/20",
+        "dark:bg-black/5 dark:before:bg-gradient-to-b dark:before:from-black/5 dark:before:to-black/20",
         "dark:after:to-black/20",
         // Common styles
         "before:absolute before:inset-0 before:rounded-[inherit] before:content-['']",
@@ -131,15 +131,19 @@ export function PulseCard({
         className="absolute inset-0 overflow-hidden rounded-[inherit]"
         style={{
           mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMask:
+            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
           maskComposite: "exclude",
+          WebkitMaskComposite: "xor",
           padding: "2px",
         }}
       >
         <div
-          className="absolute inset-[-200%] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          className="absolute inset-[-200%] opacity-0 transition-opacity duration-100 group-hover:opacity-100 animate-spin"
           style={{
-            background: `conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 340deg, var(--card-color) 360deg)`,
-            animation: "spin 4s linear infinite",
+            background:
+              "conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 340deg, var(--card-color) 360deg)",
+            animationDuration: "5s", // slows down spin
           }}
         />
       </div>
@@ -153,7 +157,7 @@ export function PulseCard({
         <span
           className={cn(
             "absolute inset-[4.5px] rounded-[inherit]",
-            "bg-linear-to-b from-black/5 to-black/10 backdrop-blur-3xl",
+            "bg-gradient-to-b from-black/5 to-black/10 backdrop-blur-3xl",
             "dark:from-white/10 dark:to-white/5",
             "transition-all duration-300",
           )}
@@ -215,10 +219,9 @@ export function PulseCard({
               {GRID_STRUCTURE.rows.map((row, i) => (
                 <div
                   key={`h-${i}`}
-                  // eslint-disable-next-line tailwindcss/classnames-order
                   className={cn(
                     "duration-[350ms] absolute inset-x-0 h-[1px] origin-[0%_50%] scale-x-0 transition-transform group-hover:scale-x-100",
-                    `bg-linear-to-r from-${variantConfig.accent}/0 via-${variantConfig.accent}/20 to-${variantConfig.accent}/0`,
+                    `bg-gradient-to-r from-${variantConfig.accent}/0 via-${variantConfig.accent}/20 to-${variantConfig.accent}/0`,
                   )}
                   style={{
                     top: `${row.start}%`,
@@ -226,14 +229,14 @@ export function PulseCard({
                   }}
                 />
               ))}
+
               {/* Vertical Lines */}
               {GRID_STRUCTURE.columns.map((col, i) => (
                 <div
                   key={`v-${i}`}
-                  // eslint-disable-next-line tailwindcss/classnames-order
                   className={cn(
                     "duration-[350ms] absolute inset-y-0 w-[1px] origin-[50%_0%] scale-y-0 transition-transform group-hover:scale-y-100",
-                    `bg-linear-to-b from-${variantConfig.accent}/0 via-${variantConfig.accent}/20 to-${variantConfig.accent}/0`,
+                    `bg-gradient-to-b from-${variantConfig.accent}/0 via-${variantConfig.accent}/20 to-${variantConfig.accent}/0`,
                   )}
                   style={{
                     left: `${col.start + col.width}%`,
@@ -244,23 +247,29 @@ export function PulseCard({
             </div>
           )}
 
-          {/* Grid Cells */}
+          {/* Grid Cells (animated with Framer Motion instead of animate-tile) */}
           <div className="group-hover:delay-[500ms] absolute inset-0 opacity-0 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-100">
             {GRID_STRUCTURE.rows.map((row, rowIndex) => (
               <React.Fragment key={`row-${rowIndex}`}>
                 {GRID_STRUCTURE.columns.map((col, colIndex) => (
-                  <div
+                  <motion.div
                     key={`cell-${rowIndex}-${colIndex}`}
                     className={cn(
-                      "absolute animate-tile opacity-0",
-                      `bg-linear-to-br ${variantConfig.gradient}`,
+                      "absolute opacity-0",
+                      `bg-gradient-to-br ${variantConfig.gradient}`,
                     )}
                     style={{
                       top: `${row.start}%`,
                       left: `${col.start}%`,
                       width: `${col.width}%`,
                       height: `${row.height}%`,
-                      animationDelay: `${((rowIndex + colIndex) % 3) * 2}s`,
+                    }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: [0, 1, 0], scale: [0.95, 1, 0.95] }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      delay: ((rowIndex + colIndex) % 3) * 2,
                     }}
                   />
                 ))}
