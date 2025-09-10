@@ -15,7 +15,7 @@ const VARIANTS = {
     accent: "blue-500",
     gradient: "from-blue-500/20 to-blue-500/0",
     shine:
-      "205deg, transparent 90deg, hsl(220deg 95% 39%) 20deg, hsl(120deg 100% 85% / 0.3) 280deg",
+      "205deg, transparent 0deg, hsl(220deg 95% 39%) 20deg, hsl(220deg 100% 85% / 0.3) 280deg",
     border: "blue-500/20",
     color: "rgb(59 130 246)",
   },
