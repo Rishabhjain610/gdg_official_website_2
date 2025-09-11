@@ -69,7 +69,25 @@ const ContactPage = () => {
               Send Message
             </button>
           </form>
+
+          
         </div>
+
+        <div
+        className="flex justify-center w-full my-10"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d120671.48411950935!2d72.75345847992571!3d19.064446407214863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3be7c91130392c07%3A0x3c47bf391c8de931!2sAdvocate%20Nari%20Gursahani%20Marg%2C%2037th%20Rd%2C%20off%20Linking%20Road%2C%20TPS%20III%2C%20Bandra%20West%2C%20Mumbai%2C%20400050!3m2!1d19.0644642!2d72.8358329!5e0!3m2!1sen!2sin!4v1756120463116!5m2!1sen!2sin"
+          className="rounded-4xl shadow-lg w-full max-w-4xl h-[450px]"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
       </div>
     </div>
   );

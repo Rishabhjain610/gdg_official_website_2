@@ -13,6 +13,9 @@ import {
 import { PulseCardDemo } from "./components/PulseCardDemo";
 import { PulseCard } from "./components/PulseCard";
 import { Zap, Target, Gem, Eye, Network as NetworkIcon } from "lucide-react";
+import CircularGallery from "@/components/CircularGallery";
+
+
 
 const Page = () => {
   // Counter state for animation
@@ -301,7 +304,23 @@ const Page = () => {
         </div>
       </section>
 
-      
+      {/* Gallery */}
+
+      <section className="relative py-20 px-4 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20 text-center sm:px-6 lg:px-8">
+        <div style={{ height: '600px', position: 'relative' }}>
+        <h1 className="text-5xl  lg:text-6xl font-extrabold mb-6 text-white">
+            The <span className="text-blue-400">G</span>
+            <span className="text-yellow-400">D</span>
+            <span className="text-red-400">G</span> Lens
+        </h1>
+        
+        <p className="text-gray-300 text-xl  lg:text-2xl leading-relaxed mb-8 font-extrabold">
+        Through the Lens 📷 : Glimpses of What Makes GDG Special ✨❤️💙💛💚
+        </p>
+
+          <CircularGallery bend={1} textColor="#ffffff" borderRadius={0.05} scrollEase={0.04}/>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <section className="relative py-20 px-4 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20 sm:px-6 lg:px-8">
