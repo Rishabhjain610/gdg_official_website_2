@@ -254,7 +254,7 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-900/20 via-transparent to-yellow-900/20">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20">
         <div className="max-w-6xl  mx-auto text-center ">
           <h1 className="text-5xl  lg:text-6xl font-extrabold mb-6 text-white">
             What is <span className="text-blue-400">G</span>
@@ -315,7 +315,7 @@ const Page = () => {
         </h1>
         
         <p className="text-gray-300 text-xl  lg:text-2xl leading-relaxed mb-8 font-extrabold">
-        Through the Lens 📷 : Glimpses of What Makes GDG Special ✨❤️💙💛💚
+        Through the Lens  : Glimpses of What Makes <span className="text-blue-400">G</span><span className="text-yellow-400">D</span><span className="text-red-400">G</span> Special 
         </p>
 
           <CircularGallery bend={1} textColor="#ffffff" borderRadius={0.05} scrollEase={0.04}/>
@@ -515,14 +515,20 @@ const Page = () => {
               <p className="text-gray-300 mb-6">
                 Feel free to reach out to us. We're here to help!
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
-                  Contact Us
-                  <IoArrowForward />
-                </button>
-                <button className="border-2 border-white/20 hover:border-white/40 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:bg-white/5">
-                  Join Community
-                </button>
+              
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
+                <Link href='/contact' className="w-full sm:w-auto">
+                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
+                    Contact Us
+                    <IoArrowForward />
+                  </button>
+                </Link>
+                
+                <Link href='/teams' className="w-full sm:w-auto">
+                  <button className="w-full border-2 border-white/20 hover:border-white/40 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:bg-white/5">
+                    Join Community
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
