@@ -47,11 +47,12 @@ const ContactPage = () => {
             <span className="text-blue-300 text-sm font-medium">Let's Connect</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
-            <span className="text-blue-400">Get </span>
-            <span className="text-red-400">In </span>
-            <span className="text-yellow-400">Touch</span>
-          </h1>
+          <motion.h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4"
+            initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:0.5}}>
+            <span className="text-blue-500">Get </span>
+            <span className="text-red-500">In </span>
+            <span className="text-yellow-500">Touch</span>
+          </motion.h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Have a question or want to collaborate? We'd love to hear from you.
           </p>
@@ -60,7 +61,7 @@ const ContactPage = () => {
         {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Contact Info */}
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8">
+          <motion.div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8" whileInView={{opacity:1, x:0}} initial={{opacity:0, x:-50}} transition={{duration:0.5}}>
             <h2 className="text-2xl font-bold mb-6">
               Let's Start a <span className="text-blue-400">Conversation</span>
             </h2>
@@ -95,14 +96,18 @@ const ContactPage = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8">
+          <motion.div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8" whileInView={{opacity:1, x:0}} initial={{opacity:0, x:50}} transition={{duration:0.5}} >
             <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
-              <input type="hidden" name="access_key" value="fbd42e37-388e-4c75-bd3f-d158d27b3e8c" />
+              {/* <input type="hidden" name="access_key" value="fbd42e37-388e-4c75-bd3f-d158d27b3e8c" 
+              /> */}
+              <input type="hidden" name="access_key"
+              value={process.env.NEXT_PUBLIC_API_KEY}
+               />
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <input
@@ -153,7 +158,7 @@ const ContactPage = () => {
                 </div>
               )}
             </form>
-          </div>
+          </motion.div>
         </div>
 
         {/* Google Maps */}
@@ -164,7 +169,7 @@ const ContactPage = () => {
           className="text-center"
         >
           <h2 className="text-3xl font-bold mb-4">
-           <span className='text-blue-400'>Find</span>  <span className="text-red-400">Our</span> <span className="text-yellow-400">Campus</span>
+           <span className='text-blue-500'>Find</span>  <span className="text-red-500">Our</span> <span className="text-yellow-500">Campus</span>
           </h2>
           <p className="text-gray-300 mb-8">Visit us at TSEC, Mumbai</p>
           

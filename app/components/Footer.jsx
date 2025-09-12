@@ -111,7 +111,7 @@ const Footer = () => {
           <div className="mt-8 pt-6 border-t border-white/10">
             <div className="flex flex-col sm:flex-row items-center justify-center text-center ">
               <div className="text-gray-400 text-sm">
-                © {currentYear} GDG TSEC. Made with ❤️ by developers.
+                © {currentYear} GDG TSEC. Made with ❤️ by GDG Tech Team.
               </div>
             </div>
           </div>

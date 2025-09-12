@@ -26,11 +26,15 @@ export const Timeline = ({ data }) => {
   return (
     <div className="w-full font-sans md:px-10" ref={containerRef}>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-      <h1 className="text-5xl  lg:text-6xl font-extrabold mb-6 text-white">
+      {/* <h1 className="text-5xl  lg:text-6xl font-extrabold mb-6 text-white">
             Our <span className="text-blue-400">Upcoming </span>
             <span className="text-yellow-400">& </span>
             <span className="text-red-400">Past </span> Events
-        </h1>
+        </h1> */}
+        <motion.h1 className="text-5xl lg:text-6xl font-extrabold mb-0 text-white"
+          initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:0.5}}>
+            Our <span className="text-blue-500">E</span><span className="text-yellow-500">v</span><span className="text-red-500">e</span><span className="text-blue-500">n</span><span className="text-yellow-500">t</span><span className="text-red-500">s</span>
+        </motion.h1>
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">

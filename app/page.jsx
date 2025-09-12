@@ -14,9 +14,7 @@ import { PulseCardDemo } from "./components/PulseCardDemo";
 import { PulseCard } from "./components/PulseCard";
 import { Zap, Target, Gem, Eye, Network as NetworkIcon } from "lucide-react";
 import CircularGallery from "@/components/CircularGallery";
-
-
-
+import {motion} from "framer-motion";
 const Page = () => {
   // Counter state for animation
   const [counters, setCounters] = useState({
@@ -117,12 +115,6 @@ const Page = () => {
               </span>
             </div>
 
-            {/* Main Heading - One Line with Google Colors */}
-            {/* <h1 className="text-4xl md:text-6xl lg:text-[60px] font-bold mb-6 leading-tight">
-              <span className="text-blue-500">LEARN, </span>
-              <span className="text-red-500">BUILD, </span>
-              <span className="text-yellow-500">GROW</span>
-            </h1> */}
             <div className="overflow-hidden mb-4 sm:text-left ">
               <h1 className="text-5xl  md:text-6xl lg:text-7xl font-bold leading-tight ">
                 <span className="text-blue-500">LEARN, </span>
@@ -248,7 +240,7 @@ const Page = () => {
               Scroll to explore
             </span>
             <div className="w-6 h-10 border-2 border-gray-400/50 rounded-full flex justify-center backdrop-blur-sm bg-white/5 shadow-lg">
-              <div className="w-1 h-3 bg-gradient-to-b from-blue-400 via-red-400 to-yellow-400 rounded-full mt-2 animate-bounce" />
+              <div className="w-1 h-3 bg-gradient-to-b from-blue-500 via-red-500 to-yellow-500 rounded-full mt-2 animate-bounce" />
             </div>
           </div>
         </div>
@@ -256,11 +248,12 @@ const Page = () => {
 
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20">
         <div className="max-w-6xl  mx-auto text-center ">
-          <h1 className="text-5xl  lg:text-6xl font-extrabold mb-6 text-white">
+          <motion.h1 className="text-5xl  lg:text-6xl font-extrabold mb-6 text-white"
+          initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}}  transition={{duration:0.5}}>
             What is <span className="text-blue-400">G</span>
             <span className="text-yellow-400">D</span>
             <span className="text-red-400">G</span>?
-          </h1>
+          </motion.h1>
           <p className="text-gray-300 text-xl  lg:text-2xl leading-relaxed mb-8">
             We are a community of passionate developers, designers, and tech
             enthusiasts building together under the Google Developer Groups
@@ -268,57 +261,75 @@ const Page = () => {
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            <PulseCard
-              icon={<Target />}
-              title="Mission"
-              description="Empower Students to learn and grow together."
-              variant="amber"
-              size="lg"
-              glowEffect={true}
-            />
-            <PulseCard
-              icon={<Gem />}
-              title="Values"
-              description="Guided by values driven by purpose."
-              variant="blue"
-              size="lg"
-              glowEffect={true}
-            />
-            <PulseCard
-              icon={<Eye />}
-              title="Vision"
-              description="Build impactful projects and faster collaboration."
-              variant="emerald"
-              size="lg"
-              glowEffect={true}
-            />
-            <PulseCard
-              icon={<NetworkIcon />}
-              title="Network"
-              description="Build connections and grow together."
-              variant="rose"
-              size="lg"
-              glowEffect={true}
-            />
+            <motion.div initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}}  transition={{duration:0.5}}>
+              <PulseCard
+                icon={<Target />}
+                title="Mission"
+                description="Empower Students to learn and grow together."
+                variant="amber"
+                size="lg"
+                glowEffect={true}
+              />
+            </motion.div>
+            <motion.div initial={{opacity:0, y:-50}} whileInView={{opacity:1, y:0}}  transition={{duration:0.5}}>
+              <PulseCard
+                icon={<Gem />}
+                title="Values"
+                description="Guided by values driven by purpose."
+                variant="blue"
+                size="lg"
+                glowEffect={true}
+              />
+            </motion.div>
+            <motion.div initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}}  transition={{duration:0.5}}>
+              <PulseCard
+                icon={<Eye />}
+                title="Vision"
+                description="Build impactful projects and faster collaboration."
+                variant="emerald"
+                size="lg"
+                glowEffect={true}
+              />
+            </motion.div>
+            <motion.div initial={{opacity:0, y:-50}} whileInView={{opacity:1, y:0}}  transition={{duration:0.5}}>
+              <PulseCard
+                icon={<NetworkIcon />}
+                title="Network"
+                description="Build connections and grow together."
+                variant="rose"
+                size="lg"
+                glowEffect={true}
+              />
+            </motion.div>
           </div>
+          
         </div>
       </section>
 
       {/* Gallery */}
 
       <section className="relative py-20 px-4 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20 text-center sm:px-6 lg:px-8">
-        <div style={{ height: '600px', position: 'relative' }}>
-        <h1 className="text-5xl  lg:text-6xl font-extrabold mb-6 text-white">
-            The <span className="text-blue-400">G</span>
-            <span className="text-yellow-400">D</span>
-            <span className="text-red-400">G</span> Lens
-        </h1>
-        
-        <p className="text-gray-300 text-xl  lg:text-2xl leading-relaxed mb-8 font-extrabold">
-        Through the Lens  : Glimpses of What Makes <span className="text-blue-400">G</span><span className="text-yellow-400">D</span><span className="text-red-400">G</span> Special 
-        </p>
+        <div style={{ height: "600px", position: "relative" }}>
+          <motion.h1 className="text-5xl  lg:text-6xl font-extrabold mb-6 text-white"
+          initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}}  transition={{duration:0.5}}>
+            The <span className="text-blue-500">G</span>
+            <span className="text-yellow-500">D</span>
+            <span className="text-red-500">G</span> Lens
+          </motion.h1>
 
-          <CircularGallery bend={1} textColor="#ffffff" borderRadius={0.05} scrollEase={0.04}/>
+          <p className="text-gray-300 text-xl  lg:text-2xl leading-relaxed mb-8 font-extrabold">
+            Through the Lens : Glimpses of What Makes{" "}
+            <span className="text-blue-500">G</span>
+            <span className="text-yellow-500">D</span>
+            <span className="text-red-500">G</span> Special
+          </p>
+
+          <CircularGallery
+            bend={1}
+            textColor="#ffffff"
+            borderRadius={0.05}
+            scrollEase={0.04}
+          />
         </div>
       </section>
 
@@ -333,10 +344,13 @@ const Page = () => {
                 <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse delay-200" />
                 <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse delay-400" />
               </div>
-              <span className="text-white font-medium">Got Questions? We've Got Answers!</span>
+              <span className="text-white font-medium">
+                Got Questions? We've Got Answers!
+              </span>
             </div>
 
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+            <motion.h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight"
+            initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}}  transition={{duration:0.5}}>
               <span className="text-white">Frequently Asked </span>
               <span className="text-blue-500">Q</span>
               <span className="text-red-500">u</span>
@@ -347,8 +361,7 @@ const Page = () => {
               <span className="text-blue-500">o</span>
               <span className="text-red-500">n</span>
               <span className="text-yellow-500">s</span>
-            </h2>
-            
+            </motion.h2>
           </div>
 
           {/* FAQ Items with Dropdown */}
@@ -357,14 +370,14 @@ const Page = () => {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/40">
               <button
                 onClick={() => {
-                  const content = document.getElementById('faq-1');
-                  const icon = document.getElementById('icon-1');
+                  const content = document.getElementById("faq-1");
+                  const icon = document.getElementById("icon-1");
                   if (content.style.maxHeight) {
                     content.style.maxHeight = null;
-                    icon.style.transform = 'rotate(0deg)';
+                    icon.style.transform = "rotate(0deg)";
                   } else {
                     content.style.maxHeight = content.scrollHeight + "px";
-                    icon.style.transform = 'rotate(45deg)';
+                    icon.style.transform = "rotate(45deg)";
                   }
                 }}
                 className="w-full text-left p-6 focus:outline-none"
@@ -373,18 +386,34 @@ const Page = () => {
                   <h3 className="text-xl font-semibold text-white">
                     What is GDG TSEC?
                   </h3>
-                  <div id="icon-1" className="text-blue-500 transition-transform duration-300">
+                  <div
+                    id="icon-1"
+                    className="text-blue-500 transition-transform duration-300"
+                  >
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M12 5V19M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path
+                        d="M12 5V19M5 12H19"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </div>
                 </div>
               </button>
-              <div id="faq-1" className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div
+                id="faq-1"
+                className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
                 <div className="px-6 pb-6">
                   <div className="border-t border-blue-500/20 pt-4">
                     <p className="text-gray-300 leading-relaxed">
-                      GDG TSEC is the Google Developer Group chapter at Thadomal Shahani Engineering College. We're a community of passionate developers, designers, and tech enthusiasts who come together to learn, build, and grow with Google's latest technologies.
+                      GDG TSEC is the Google Developer Group chapter at Thadomal
+                      Shahani Engineering College. We're a community of
+                      passionate developers, designers, and tech enthusiasts who
+                      come together to learn, build, and grow with Google's
+                      latest technologies.
                     </p>
                   </div>
                 </div>
@@ -395,14 +424,14 @@ const Page = () => {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-red-500/20 overflow-hidden transition-all duration-300 hover:border-red-500/40">
               <button
                 onClick={() => {
-                  const content = document.getElementById('faq-2');
-                  const icon = document.getElementById('icon-2');
+                  const content = document.getElementById("faq-2");
+                  const icon = document.getElementById("icon-2");
                   if (content.style.maxHeight) {
                     content.style.maxHeight = null;
-                    icon.style.transform = 'rotate(0deg)';
+                    icon.style.transform = "rotate(0deg)";
                   } else {
                     content.style.maxHeight = content.scrollHeight + "px";
-                    icon.style.transform = 'rotate(45deg)';
+                    icon.style.transform = "rotate(45deg)";
                   }
                 }}
                 className="w-full text-left p-6 focus:outline-none"
@@ -411,18 +440,34 @@ const Page = () => {
                   <h3 className="text-xl font-semibold text-white">
                     Who can join GDG TSEC?
                   </h3>
-                  <div id="icon-2" className="text-red-500 transition-transform duration-300">
+                  <div
+                    id="icon-2"
+                    className="text-red-500 transition-transform duration-300"
+                  >
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M12 5V19M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path
+                        d="M12 5V19M5 12H19"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </div>
                 </div>
               </button>
-              <div id="faq-2" className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div
+                id="faq-2"
+                className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
                 <div className="px-6 pb-6">
                   <div className="border-t border-red-500/20 pt-4">
                     <p className="text-gray-300 leading-relaxed">
-                      GDG TSEC is open to all students, faculty, and tech enthusiasts regardless of their experience level. Whether you're a beginner just starting your coding journey or an experienced developer, you're welcome to join our community.
+                      GDG TSEC is open to all students,tech enthusiasts of Tsec
+                      regardless of their experience level. Whether you're a
+                      beginner just starting your coding journey or an
+                      experienced developer, you're welcome to join our
+                      community.
                     </p>
                   </div>
                 </div>
@@ -433,34 +478,50 @@ const Page = () => {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-yellow-500/20 overflow-hidden transition-all duration-300 hover:border-yellow-500/40">
               <button
                 onClick={() => {
-                  const content = document.getElementById('faq-3');
-                  const icon = document.getElementById('icon-3');
+                  const content = document.getElementById("faq-3");
+                  const icon = document.getElementById("icon-3");
                   if (content.style.maxHeight) {
                     content.style.maxHeight = null;
-                    icon.style.transform = 'rotate(0deg)';
+                    icon.style.transform = "rotate(0deg)";
                   } else {
                     content.style.maxHeight = content.scrollHeight + "px";
-                    icon.style.transform = 'rotate(45deg)';
+                    icon.style.transform = "rotate(45deg)";
                   }
                 }}
                 className="w-full text-left p-6 focus:outline-none"
               >
                 <div className="flex items-center justify-between">
                   <h3 className="text-xl font-semibold text-white">
-                    What kind of events do you organize?
+                    What kind of events do we organize?
                   </h3>
-                  <div id="icon-3" className="text-yellow-500 transition-transform duration-300">
+                  <div
+                    id="icon-3"
+                    className="text-yellow-500 transition-transform duration-300"
+                  >
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M12 5V19M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path
+                        d="M12 5V19M5 12H19"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </div>
                 </div>
               </button>
-              <div id="faq-3" className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div
+                id="faq-3"
+                className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
                 <div className="px-6 pb-6">
                   <div className="border-t border-yellow-500/20 pt-4">
                     <p className="text-gray-300 leading-relaxed">
-                      We organize a variety of events including technical workshops, hackathons, code labs, speaker sessions, study jams, and networking events. Our events cover various Google technologies like Android, Web Development, Cloud, AI/ML, and more.
+                      We organize a variety of events including technical
+                      workshops, hackathons, speaker sessions, study jams, and
+                      networking events. Our events cover various Google
+                      technologies like Android, Web Development, Cloud, AI/ML,
+                      and more.
                     </p>
                   </div>
                 </div>
@@ -471,14 +532,14 @@ const Page = () => {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-green-500/20 overflow-hidden transition-all duration-300 hover:border-green-500/40">
               <button
                 onClick={() => {
-                  const content = document.getElementById('faq-4');
-                  const icon = document.getElementById('icon-4');
+                  const content = document.getElementById("faq-4");
+                  const icon = document.getElementById("icon-4");
                   if (content.style.maxHeight) {
                     content.style.maxHeight = null;
-                    icon.style.transform = 'rotate(0deg)';
+                    icon.style.transform = "rotate(0deg)";
                   } else {
                     content.style.maxHeight = content.scrollHeight + "px";
-                    icon.style.transform = 'rotate(45deg)';
+                    icon.style.transform = "rotate(45deg)";
                   }
                 }}
                 className="w-full text-left p-6 focus:outline-none"
@@ -487,18 +548,32 @@ const Page = () => {
                   <h3 className="text-xl font-semibold text-white">
                     Do I need to pay to join GDG TSEC?
                   </h3>
-                  <div id="icon-4" className="text-green-500 transition-transform duration-300">
+                  <div
+                    id="icon-4"
+                    className="text-green-500 transition-transform duration-300"
+                  >
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M12 5V19M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path
+                        d="M12 5V19M5 12H19"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </div>
                 </div>
               </button>
-              <div id="faq-4" className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div
+                id="faq-4"
+                className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
                 <div className="px-6 pb-6">
                   <div className="border-t border-green-500/20 pt-4">
                     <p className="text-gray-300 leading-relaxed">
-                      No, joining GDG TSEC is completely free! All our events and workshops are also free of cost. We believe in making technology education accessible to everyone.
+                      No, joining GDG TSEC is completely free! All our events
+                      and workshops are also free of cost. We believe in making
+                      technology education accessible to everyone.
                     </p>
                   </div>
                 </div>
@@ -507,7 +582,7 @@ const Page = () => {
           </div>
 
           {/* Contact CTA */}
-          <div className="mt-16 text-center">
+          <motion.div className="mt-16 text-center" initial={{opacity:0, x:50}} whileInView={{opacity:1, x:0}}  transition={{duration:0.5}}>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Still have questions?
@@ -515,23 +590,23 @@ const Page = () => {
               <p className="text-gray-300 mb-6">
                 Feel free to reach out to us. We're here to help!
               </p>
-              
+
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
-                <Link href='/contact' className="w-full sm:w-auto">
+                <Link href="/contact" className="w-full sm:w-auto">
                   <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
                     Contact Us
                     <IoArrowForward />
                   </button>
                 </Link>
-                
-                <Link href='/teams' className="w-full sm:w-auto">
+
+                <Link href="/teams" className="w-full sm:w-auto">
                   <button className="w-full border-2 border-white/20 hover:border-white/40 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:bg-white/5">
                     Join Community
                   </button>
                 </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
