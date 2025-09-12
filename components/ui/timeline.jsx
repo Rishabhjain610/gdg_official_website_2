@@ -31,7 +31,7 @@ export const Timeline = ({ data }) => {
             <span className="text-yellow-400">& </span>
             <span className="text-red-400">Past </span> Events
         </h1> */}
-        <motion.h1 className="text-5xl lg:text-6xl font-extrabold mb-0 text-white"
+        <motion.h1 className="text-5xl sm:text-6xl font-extrabold mb-0 text-white"
           initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:0.5}}>
             Our <span className="text-blue-500">E</span><span className="text-yellow-500">v</span><span className="text-red-500">e</span><span className="text-blue-500">n</span><span className="text-yellow-500">t</span><span className="text-red-500">s</span>
         </motion.h1>

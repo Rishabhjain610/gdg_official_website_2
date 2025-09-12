@@ -47,7 +47,7 @@ const ContactPage = () => {
             <span className="text-blue-300 text-sm font-medium">Let's Connect</span>
           </div>
           
-          <motion.h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4"
+          <motion.h1 className="text-5xl lg:text-6xl font-extrabold mb-4"
             initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:0.5}}>
             <span className="text-blue-500">Get </span>
             <span className="text-red-500">In </span>
