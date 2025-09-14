@@ -54,13 +54,10 @@ export default function ClientLayoutWrapper({ children }) {
 
   return (
     <>
-     <Navbar />
+      <Navbar />
       <GridBackground>
-       
         <div className="relative z-10 flex flex-col">
-          
           <main className="flex-1">{children}</main>
-          
         </div>
       </GridBackground>
       <Footer />

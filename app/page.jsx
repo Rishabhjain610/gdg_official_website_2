@@ -14,7 +14,7 @@ import { PulseCardDemo } from "./components/PulseCardDemo";
 import { PulseCard } from "./components/PulseCard";
 import { Zap, Target, Gem, Eye, Network as NetworkIcon } from "lucide-react";
 import CircularGallery from "@/components/CircularGallery";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 const Page = () => {
   // Counter state for animation
   const [counters, setCounters] = useState({
@@ -248,8 +248,12 @@ const Page = () => {
 
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20">
         <div className="max-w-6xl  mx-auto text-center ">
-          <motion.h1 className="text-5xl  lg:text-6xl font-extrabold mb-6 text-white"
-          initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}}  transition={{duration:0.5}}>
+          <motion.h1
+            className="text-5xl  lg:text-6xl font-extrabold mb-6 text-white"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             What is <span className="text-blue-400">G</span>
             <span className="text-yellow-400">D</span>
             <span className="text-red-400">G</span>?
@@ -261,7 +265,11 @@ const Page = () => {
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            <motion.div initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}}  transition={{duration:0.5}}>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <PulseCard
                 icon={<Target />}
                 title="Mission"
@@ -271,7 +279,11 @@ const Page = () => {
                 glowEffect={true}
               />
             </motion.div>
-            <motion.div initial={{opacity:0, y:-50}} whileInView={{opacity:1, y:0}}  transition={{duration:0.5}}>
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <PulseCard
                 icon={<Gem />}
                 title="Values"
@@ -281,7 +293,11 @@ const Page = () => {
                 glowEffect={true}
               />
             </motion.div>
-            <motion.div initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}}  transition={{duration:0.5}}>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <PulseCard
                 icon={<Eye />}
                 title="Vision"
@@ -291,7 +307,11 @@ const Page = () => {
                 glowEffect={true}
               />
             </motion.div>
-            <motion.div initial={{opacity:0, y:-50}} whileInView={{opacity:1, y:0}}  transition={{duration:0.5}}>
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <PulseCard
                 icon={<NetworkIcon />}
                 title="Network"
@@ -302,7 +322,6 @@ const Page = () => {
               />
             </motion.div>
           </div>
-          
         </div>
       </section>
 
@@ -310,8 +329,12 @@ const Page = () => {
 
       <section className="relative py-20 px-4 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20 text-center sm:px-6 lg:px-8">
         <div style={{ height: "600px", position: "relative" }}>
-          <motion.h1 className="text-5xl  lg:text-6xl font-extrabold mb-6 text-white"
-          initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}}  transition={{duration:0.5}}>
+          <motion.h1
+            className="text-5xl  lg:text-6xl font-extrabold mb-6 text-white"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             The <span className="text-blue-500">G</span>
             <span className="text-yellow-500">D</span>
             <span className="text-red-500">G</span> Lens
@@ -349,8 +372,12 @@ const Page = () => {
               </span>
             </div>
 
-            <motion.h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight"
-            initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}}  transition={{duration:0.5}}>
+            <motion.h2
+              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <span className="text-white">Frequently Asked </span>
               <span className="text-blue-500">Q</span>
               <span className="text-red-500">u</span>
@@ -582,7 +609,12 @@ const Page = () => {
           </div>
 
           {/* Contact CTA */}
-          <motion.div className="mt-16 text-center" initial={{opacity:0, x:50}} whileInView={{opacity:1, x:0}}  transition={{duration:0.5}}>
+          <motion.div
+            className="mt-16 text-center"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Still have questions?

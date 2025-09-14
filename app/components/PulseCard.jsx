@@ -113,13 +113,13 @@ export function PulseCard({
         "hover:shadow-[0px_5px_15px_rgba(0,0,0,0.03),0px_25px_35px_rgba(0,0,0,0.2)]",
         "dark:shadow-[0px_3px_8px_rgba(0,0,0,0.08),0px_12px_20px_rgba(0,0,0,0.15)]",
         "dark:hover:shadow-[0px_5px_15px_rgba(0,0,0,0.06),0px_25px_35px_rgba(0,0,0,0.4)]",
-        className,
+        className
       )}
       style={{
         "--card-color": variantConfig.color,
       }}
     >
-      {/* Moving Border */}
+      
       <div
         className="absolute inset-0 overflow-hidden rounded-[inherit]"
         style={{
@@ -152,7 +152,7 @@ export function PulseCard({
             "absolute inset-0 items-center justify-center rounded-[inherit]",
             "bg-gradient-to-b from-black/5 to-black/10 backdrop-blur-3xl",
             "dark:from-white/10 dark:to-white/5",
-            "transition-all duration-300",
+            "transition-all duration-300"
           )}
         />
         <span
@@ -160,7 +160,7 @@ export function PulseCard({
             "relative z-1 block transition-colors duration-300",
             "text-black/60 group-hover:text-[var(--card-color)]",
             "dark:text-zinc-400",
-            sizeConfig.iconSize,
+            sizeConfig.iconSize
           )}
         >
           {icon}
@@ -174,7 +174,7 @@ export function PulseCard({
             "font-medium transition-colors duration-300",
             "text-black/80 group-hover:text-[var(--card-color)]",
             "dark:text-white/80",
-            sizeConfig.titleSize,
+            sizeConfig.titleSize
           )}
         >
           {title}
@@ -184,14 +184,14 @@ export function PulseCard({
             "mt-1 transition-colors duration-300",
             "text-black/60",
             "dark:text-white/40",
-            sizeConfig.descSize,
+            sizeConfig.descSize
           )}
         >
           {description}
         </p>
       </div>
 
-      {/* Shine Effect */}
+     
       <div className="absolute inset-0 z-20 overflow-hidden rounded-[inherit] opacity-0 transition-all duration-500 group-hover:opacity-100">
         <div
           className="absolute bottom-[55%] left-1/2 aspect-square w-[200%] -translate-x-1/2 rounded-[50%]"
@@ -202,19 +202,19 @@ export function PulseCard({
         />
       </div>
 
-      {/* Background Pattern */}
+     
       <div className="absolute inset-0 overflow-hidden rounded-[inherit] [mask-image:radial-gradient(circle_at_70%_8%,black_0%,black_15%,transparent_60%)]">
         <div className="absolute inset-0">
-          {/* Grid Lines */}
+         
           {showGridLines && (
             <div className="duration-[350ms] opacity-1 absolute inset-0 transition-opacity group-hover:opacity-100">
-              {/* Horizontal Lines */}
+              
               {GRID_STRUCTURE.rows.map((row, i) => (
                 <div
                   key={`h-${i}`}
                   className={cn(
                     "duration-[350ms] absolute inset-x-0 h-[1px] origin-[0%_50%] scale-x-0 transition-transform group-hover:scale-x-100",
-                    `bg-gradient-to-r from-${variantConfig.accent}/0 via-${variantConfig.accent}/20 to-${variantConfig.accent}/0`,
+                    `bg-gradient-to-r from-${variantConfig.accent}/0 via-${variantConfig.accent}/20 to-${variantConfig.accent}/0`
                   )}
                   style={{
                     top: `${row.start}%`,
@@ -223,13 +223,13 @@ export function PulseCard({
                 />
               ))}
 
-              {/* Vertical Lines */}
+              
               {GRID_STRUCTURE.columns.map((col, i) => (
                 <div
                   key={`v-${i}`}
                   className={cn(
                     "duration-[350ms] absolute inset-y-0 w-[1px] origin-[50%_0%] scale-y-0 transition-transform group-hover:scale-y-100",
-                    `bg-gradient-to-b from-${variantConfig.accent}/0 via-${variantConfig.accent}/20 to-${variantConfig.accent}/0`,
+                    `bg-gradient-to-b from-${variantConfig.accent}/0 via-${variantConfig.accent}/20 to-${variantConfig.accent}/0`
                   )}
                   style={{
                     left: `${col.start + col.width}%`,
@@ -240,7 +240,7 @@ export function PulseCard({
             </div>
           )}
 
-          {/* Grid Cells (animated with Framer Motion instead of animate-tile) */}
+        
           <div className="group-hover:delay-[500ms] absolute inset-0 opacity-0 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-100">
             {GRID_STRUCTURE.rows.map((row, rowIndex) => (
               <React.Fragment key={`row-${rowIndex}`}>
@@ -249,7 +249,7 @@ export function PulseCard({
                     key={`cell-${rowIndex}-${colIndex}`}
                     className={cn(
                       "absolute opacity-0",
-                      `bg-gradient-to-br ${variantConfig.gradient}`,
+                      `bg-gradient-to-br ${variantConfig.gradient}`
                     )}
                     style={{
                       top: `${row.start}%`,

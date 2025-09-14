@@ -1,4 +1,3 @@
-
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ClientLayoutWrapper from "./components/ClientLayoutWrapper";
@@ -13,19 +12,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
 export const metadata = {
   title: "GDG TSEC Official Website",
   description: "Google Developer Group at Thadomal Shahani Engineering College",
-  icons:{
-    icon: '/Logo.png',
-  }
+  icons: {
+    icon: "/Logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

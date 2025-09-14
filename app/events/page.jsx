@@ -1,9 +1,8 @@
-'use client'
+"use client";
 
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Timeline } from "@/components/ui/timeline";
-
 
 export default function EventsPage() {
   const events = [
@@ -12,7 +11,7 @@ export default function EventsPage() {
       date: "January, 2026",
       title: "Hacksync 2.0",
       color: "bg-green-500",
-      imgSrc: "/events/staytuned.jpeg",  // your custom image path here
+      imgSrc: "/events/staytuned.jpeg", // your custom image path here
       details:
         "A 48-hour non-stop hackathon bringing together the brightest minds to build, innovate, and collaborate. Teams will tackle real-world challenges across domains like AI, Web/App Dev, and more.",
     },
@@ -81,13 +80,14 @@ export default function EventsPage() {
     },
   ];
 
-
-  
-
   // Animation variants for the floating in effect
   const variants = {
     hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   // Map events to timeline data with motion divs
@@ -115,9 +115,12 @@ export default function EventsPage() {
         >
           <h1
             className={`text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold mb-2 ${
-              ["text-red-500", "text-blue-500", "text-yellow-300", "text-green-500"][
-                index % 4
-              ]
+              [
+                "text-red-500",
+                "text-blue-500",
+                "text-yellow-300",
+                "text-green-500",
+              ][index % 4]
             }`}
           >
             {event.title}
@@ -136,32 +139,28 @@ export default function EventsPage() {
           </span>
 
           <div className="flex flex-col sm:flex-row">
-          <img
-            src={event.imgSrc}
-            alt={`Image for ${event.title}`}
-            width={500}
-            height={500}
-            className="w-auto h-auto sm:h-44 md:h-52 lg:h-60 rounded-lg object-cover shadow mb-4 sm:mb-0"
-          />
+            <img
+              src={event.imgSrc}
+              alt={`Image for ${event.title}`}
+              width={500}
+              height={500}
+              className="w-auto h-auto sm:h-44 md:h-52 lg:h-60 rounded-lg object-cover shadow mb-4 sm:mb-0"
+            />
 
-          <p className="text-gray-200 dark:text-gray-300 text-base sm:text-lg font-semibold leading-relaxed p-5">
-            {event.details}
-          </p>
-        </div>
-
-
-          
+            <p className="text-gray-200 dark:text-gray-300 text-base sm:text-lg font-semibold leading-relaxed p-5">
+              {event.details}
+            </p>
+          </div>
         </motion.div>
       ),
     };
   });
 
   return (
-
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20">
-    <div className="relative w-full overflow-clip px-4 py-12">
-      <Timeline data={data} />
-    </div>
+      <div className="relative w-full overflow-clip px-4 py-12">
+        <Timeline data={data} />
+      </div>
     </section>
   );
 }
