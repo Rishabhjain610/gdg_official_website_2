@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import FAQItem from "./components/FAQItem";
+
 import {
   IoArrowForward,
   IoCalendarOutline,
@@ -10,7 +10,7 @@ import {
   IoCodeSlashOutline,
   IoTrophyOutline,
 } from "react-icons/io5";
-import { PulseCardDemo } from "./components/PulseCardDemo";
+import Chatbot from './components/Chatbot'
 import { PulseCard } from "./components/PulseCard";
 import { Zap, Target, Gem, Eye, Network as NetworkIcon } from "lucide-react";
 import CircularGallery from "@/components/CircularGallery";
@@ -99,15 +99,11 @@ const Page = () => {
         <div className="absolute inset-0 bg-gradient-to-tl from-yellow-900/6 via-transparent to-green-900/8"></div>
       </div>
 
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 pt-20">
-        {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20" />
 
         <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
           <div className="text-center mt-5 lg:text-left">
-            {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
               <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
               <span className="text-blue-300 text-sm font-medium">
@@ -142,7 +138,6 @@ const Page = () => {
               </div>
             </div>
 
-            {/* Animated Stats with Background */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {stats.map((stat, index) => (
                 <div
@@ -161,12 +156,9 @@ const Page = () => {
             </div>
           </div>
 
-          {/* Right Content - GDG Card (Unchanged) */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              {/* Floating Card */}
               <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 max-w-md shadow-2xl">
-                {/* GDG Logo and Info */}
                 <div className="flex items-center gap-4 mb-6">
                   <div className="relative">
                     <Image
@@ -186,7 +178,6 @@ const Page = () => {
                   </div>
                 </div>
 
-                {/* Features */}
                 <div className="space-y-4">
                   {features.map((feature, index) => (
                     <div
@@ -206,7 +197,6 @@ const Page = () => {
                   ))}
                 </div>
 
-                {/* Badge with Google Colors */}
                 <div className="mt-6 pt-6 border-t border-white/10">
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">Powered by</span>
@@ -225,7 +215,6 @@ const Page = () => {
                 </div>
               </div>
 
-              {/* Floating Elements with Google Colors */}
               <div className="absolute -top-4 -left-4 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse" />
               <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-red-500/20 rounded-full blur-xl animate-pulse delay-1000" />
               <div className="absolute top-1/2 -left-6 w-12 h-12 bg-yellow-500/20 rounded-full blur-lg animate-pulse delay-500" />
@@ -233,7 +222,6 @@ const Page = () => {
           </div>
         </div>
 
-        {/* Enhanced Scroll Indicator - Moved to the right */}
         <div className="absolute bottom-8 left-1/2 lg:left-[55%] transform -translate-x-1/2">
           <div className="flex flex-col items-center gap-2 text-gray-400">
             <span className="text-xs font-medium opacity-75">
@@ -324,7 +312,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-
+      <Chatbot/>
       {/* Gallery */}
 
       <section className="relative py-20 px-4 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20 text-center sm:px-6 lg:px-8">
@@ -356,10 +344,8 @@ const Page = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section className="relative py-20 px-4 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto relative z-10 from-blue-900/20 via-transparent to-red-900/20">
-          {/* Section Header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-3 bg-white/5 border border-white/20 rounded-full px-6 py-3 mb-8 backdrop-blur-sm">
               <div className="flex gap-1">
@@ -391,7 +377,6 @@ const Page = () => {
             </motion.h2>
           </div>
 
-          {/* FAQ Items with Dropdown */}
           <div className="space-y-4">
             {/* FAQ Item 1 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/40">
@@ -608,7 +593,6 @@ const Page = () => {
             </div>
           </div>
 
-          {/* Contact CTA */}
           <motion.div
             className="mt-16 text-center"
             initial={{ opacity: 0, x: 50 }}

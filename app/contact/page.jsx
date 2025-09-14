@@ -9,6 +9,7 @@ import {
 } from "react-icons/io5";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Chatbot from "../components/Chatbot";
 const ContactPage = () => {
   const [status, setStatus] = useState("idle");
 
@@ -192,7 +193,7 @@ const ContactPage = () => {
                 )}
               </button>
 
-              {/* Status Messages */}
+            
               {status === "success" && (
                 <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-xl text-green-400 text-center">
                   ✅ Message sent successfully!
@@ -206,7 +207,7 @@ const ContactPage = () => {
             </form>
           </motion.div>
         </div>
-
+        <Chatbot/>
        
         <motion.div
           initial={{ opacity: 0, y: 30 }}

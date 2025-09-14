@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Timeline } from "@/components/ui/timeline";
-
+import Chatbot from "../components/Chatbot";
 export default function EventsPage() {
   const events = [
     {
@@ -160,6 +160,7 @@ export default function EventsPage() {
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20">
       <div className="relative w-full overflow-clip px-4 py-12">
         <Timeline data={data} />
+        <Chatbot/>
       </div>
     </section>
   );
