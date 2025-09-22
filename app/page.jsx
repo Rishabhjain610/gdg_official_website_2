@@ -130,7 +130,7 @@ const Page = () => {
               />
               <div className="">
                 <h1 className="text-[18px] sm:text-[25px]">
-                  Google Developer Group
+                  Google Developer Groups
                 </h1>
                 <h1 className="text-blue-300 text-[4px]sm:text-lg">
                   Thadomal Shahani Engineering College
@@ -171,7 +171,7 @@ const Page = () => {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">GDG TSEC</h3>
-                    <p className="text-white text-sm">Google Developer Group</p>
+                    <p className="text-white text-sm">Google Developer Groups</p>
                     <p className="text-blue-300 text-xs">
                       Thadomal Shahani Engineering College
                     </p>
@@ -421,7 +421,7 @@ const Page = () => {
                 <div className="px-6 pb-6">
                   <div className="border-t border-blue-500/20 pt-4">
                     <p className="text-gray-300 leading-relaxed">
-                      GDG TSEC is the Google Developer Group chapter at Thadomal
+                      GDG TSEC is the Google Developer Groups' chapter at Thadomal
                       Shahani Engineering College. We're a community of
                       passionate developers, designers, and tech enthusiasts who
                       come together to learn, build, and grow with Google's

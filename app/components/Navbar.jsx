@@ -10,6 +10,7 @@ import {
   IoPeopleOutline,
   IoCalendarOutline,
   IoMailOutline,
+  IoTrophyOutline,
 } from "react-icons/io5";
 
 const Navbar = () => {
@@ -19,9 +20,10 @@ const Navbar = () => {
   
   const navLinks = [
     { name: "Home", href: "/", icon: <IoHomeOutline size={20} /> },
-
+    { name: "About", href: "/about", icon: <IoInformationCircleOutline size={20} /> },
     { name: "Teams", href: "/teams", icon: <IoPeopleOutline size={20} /> },
     { name: "Events", href: "/events", icon: <IoCalendarOutline size={20} /> },
+    { name: "Sponsors", href: "/sponsors", icon: <IoTrophyOutline size={20} /> },
     { name: "Contact", href: "/contact", icon: <IoMailOutline size={20} /> },
   ];
 
