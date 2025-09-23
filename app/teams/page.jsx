@@ -230,7 +230,7 @@ const cards = [
 
 const TeamsPage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-center text-white px-4 pt-24">
+    <div className="min-h-screen flex flex-col items-center justify-center text-center text-white px-4 pt-24 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20">
       <h1 className="text-5xl font-bold mb-4 mt-7">Our
         <span> </span>
         <span className="text-blue-500">T</span>
