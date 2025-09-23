@@ -6,7 +6,7 @@ const cards = [
   //tech 
   {
     link: "Hammad Shaikh",
-    cover: "/teams/Hammad_Shaikh.png",
+    cover: "/teams/Hammad_Shaikh.jpg",
     title: "TECH JCOM",
     character: "/teams/Hammad.png", // Or use same image for character
     alt: "Hammad Shaikh",
@@ -21,7 +21,7 @@ const cards = [
     character: "/teams/Bhoomi_Sakhrani.png", // Or use same image for character
     alt: "Rishabh Jain",
     name:"Bhoomi Sakhrani",
-    linkedin: "https://www.linkedin.com/in/rishabhjain610", // <-- Add your LinkedIn URL
+    linkedin: "https://www.linkedin.com/in/bhoomi-sakhrani/", // <-- Add your LinkedIn URL
     github: "https://github.com/itzBhoomi", 
    
   },
@@ -34,7 +34,27 @@ const cards = [
     name:"Rishabh Jain",
     linkedin: "https://www.linkedin.com/in/rishabhjain610", // <-- Add your LinkedIn URL
     github: "https://github.com/Rishabhjain610",
-  }
+  },
+  {
+    link: "Yashas Vaddi",
+    cover: "/teams/Yashas_Vaddi.jpg",
+    title: "TECH SCOM",
+    character: "/teams/Yashas.png", // Or use same image for character
+    alt: "Yashas Vaddi",
+    name:"Yashas Vaddi",
+    linkedin: "https://www.linkedin.com/in/yashasvaddi/", // <-- Add your LinkedIn URL
+    github: "https://github.com/Yashasvaddi", 
+  },
+  {
+    link: "Anish",
+    cover: "/teams/Yashas_Vaddi.jpg",
+    title: "TECH Lead",
+    character: "/teams/Yashas.png", // Or use same image for character
+    alt: "Anish",
+    name:"Anish Dharnidhar",
+    linkedin: "https://www.linkedin.com/in/hammad-shaikh047/", // <-- Add your LinkedIn URL
+    github: "https://github.com/HammadShaikh-051",
+  },
 ];
 
 const TeamsPage = () => {
