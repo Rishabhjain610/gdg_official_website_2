@@ -4,11 +4,14 @@ import Card from "../components/Card";
 import Image from "next/image";
 const cards = [
   {
-    link: "https://www.mythrillfiction.com/the-dark-rider",
-    cover: "https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg",
-    title: "https://ggayane.github.io/css-experiments/cards/dark_rider-title.png",
-    character: "https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp",
-    alt: "Dark Rider"
+    link: "Hammad Shaikh",
+    cover: "/teams/Hammad_Shaikh.png",
+    title: "TECH JCOM",
+    character: "/teams/Hammad.png", // Or use same image for character
+    alt: "Hammad Shaikh",
+    name:"Hammad Shaikh",
+    linkedin: "https://www.linkedin.com/in/hammad-shaikh047/", // <-- Add your LinkedIn URL
+    github: "https://github.com/HammadShaikh-051", 
   },
   {
     link: "Bhoomi Sakhrani",
