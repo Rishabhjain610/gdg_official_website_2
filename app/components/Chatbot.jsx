@@ -51,7 +51,7 @@ const Chatbot = () => {
      
       <motion.button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-[35px] right-[20px] w-[100px] h-[100px]   rounded-full shadow-lg text-white z-50"
+        className="fixed bottom-[35px] sm:right-[20px] right-[10px] sm:w-[100px] sm:h-[100px] h-[60px] w-[60px]   rounded-full shadow-lg text-white z-50"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         aria-label="Open chat"
