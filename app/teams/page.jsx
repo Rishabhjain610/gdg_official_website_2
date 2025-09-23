@@ -47,13 +47,13 @@ const cards = [
   },
   {
     link: "Anish",
-    cover: "/teams/Yashas_Vaddi.jpg",
+    cover: "/teams/Anish_Dharnidhar.jpg",
     title: "TECH Lead",
-    character: "/teams/Yashas.png", // Or use same image for character
+    character: "/teams/Anish.png", // Or use same image for character
     alt: "Anish",
     name:"Anish Dharnidhar",
-    linkedin: "https://www.linkedin.com/in/hammad-shaikh047/", // <-- Add your LinkedIn URL
-    github: "https://github.com/HammadShaikh-051",
+    linkedin: "https://www.linkedin.com/in/anish-dharnidhar/", // <-- Add your LinkedIn URL
+    github: "https://github.com/Anish9320",
   },
 ];
 
