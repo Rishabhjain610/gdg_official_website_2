@@ -138,7 +138,7 @@ export default function EventsPage() {
             {event.status}
           </span>
 
-          <div className="flex flex-col sm:flex-row md:flex-row">
+          <div className="flex flex-col  lg:flex-row">
             <img
               src={event.imgSrc}
               alt={`Image for ${event.title}`}

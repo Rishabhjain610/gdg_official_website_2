@@ -31,7 +31,7 @@ const Footer = () => {
                 />
                 <div>
                   <h3 className="text-white text-lg font-bold">
-                    Google Developers Group
+                    Google Developers Groups
                   </h3>
                   <p className="text-blue-400 text-sm">
                     Thadomal Shahani Engineering College
@@ -96,6 +96,14 @@ const Footer = () => {
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
                     Events
+                  </Link>
+                </li>
+                 <li>
+                  <Link
+                    href="/sponsors"
+                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                  >
+                    Sponsors
                   </Link>
                 </li>
                 <li>
