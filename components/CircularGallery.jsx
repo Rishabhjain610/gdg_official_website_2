@@ -381,6 +381,8 @@ class App {
       { image: `/gallery/11.png` },
       { image: `/gallery/12.png` },
       { image: `/gallery/13.jpg` },
+      { image: `/gallery/14.jpg` },
+      { image: `/gallery/15.jpg` },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);

@@ -31,7 +31,7 @@ const Footer = () => {
                 />
                 <div>
                   <h3 className="text-white text-lg font-bold">
-                    Google Developers Groups
+                    Google Developer Groups
                   </h3>
                   <p className="text-blue-400 text-sm">
                     Thadomal Shahani Engineering College

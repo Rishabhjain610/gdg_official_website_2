@@ -231,6 +231,7 @@ const ContactPage = () => {
             />
           </div>
         </motion.div>
+        <Chatbot/>
       </div>
     </div>
   );

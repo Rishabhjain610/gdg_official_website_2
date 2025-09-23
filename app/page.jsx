@@ -421,7 +421,7 @@ const Page = () => {
                 <div className="px-6 pb-6">
                   <div className="border-t border-blue-500/20 pt-4">
                     <p className="text-gray-300 leading-relaxed">
-                      GDG TSEC is the Google Developer Groups' chapter at Thadomal
+                      GDG TSEC is the Google Developer Groups chapter at Thadomal
                       Shahani Engineering College. We're a community of
                       passionate developers, designers, and tech enthusiasts who
                       come together to learn, build, and grow with Google's
