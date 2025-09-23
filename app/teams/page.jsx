@@ -48,7 +48,7 @@ const cards = [
   {
     link: "Anish",
     cover: "/teams/Anish_Dharnidhar.jpg",
-    title: "TECH LEAD",
+    title: "TECH HEAD",
     character: "/teams/Anish.png", // Or use same image for character
     alt: "Anish",
     name:"Anish Dharnidhar",
@@ -60,7 +60,7 @@ const cards = [
   {
     link: "Aditya Rajpal",
     cover: "/teams/Aditya_Rajpal.jpg",
-    title: "OPERATION LEAD",
+    title: "OPERATION HEAD",
     character: "/teams/Aditya.png", // Or use same image for character
     alt: "Aditya Rajpal",
     name:"Aditya Rajpal",
