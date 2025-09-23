@@ -3,6 +3,7 @@ import React from "react";
 import Card from "../components/Card";
 import Image from "next/image";
 const cards = [
+  //tech 
   {
     link: "Hammad Shaikh",
     cover: "/teams/Hammad_Shaikh.png",
