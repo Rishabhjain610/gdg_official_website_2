@@ -370,7 +370,7 @@ const cards = [
   // Tech SCOM
   {
     link: "Rishabh Jain",
-    cover: "/teams/Rishabh_Jain_Tech_SCOM.jpg",
+    cover: "/teams/Rishabh_Jain.jpg",
     title: "TECH SCOM",
     character: "/teams/Rishabh_Jain.png",
     alt: "Rishabh Jain",
