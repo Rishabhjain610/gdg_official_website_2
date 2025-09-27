@@ -13,7 +13,7 @@ const Card = ({
   github,
 }) => (
   <div className="flex flex-col items-center">
-    <a href={link} target="_blank" rel="noopener noreferrer" aria-label={alt}>
+  
       <div className="card">
         <div className="wrapper">
           <img src={cover} alt={`${alt} cover`} className="cover-image" />
@@ -25,18 +25,18 @@ const Card = ({
         )}
         <img src={character} alt={`${alt} character`} className="character" />
       </div>
-    </a>
-    {/* Designation */}
+    
+    
     {title && (
       <div className="mt-6 mb-2 text-base md:text-lg font-semibold text-white tracking-wide text-center bg-gradient-to-r from-blue-900/40 via-transparent to-red-900/40 px-4 py-2 rounded-full shadow w-4/5">
         {title}
       </div>
     )}
-    {/* Divider */}
+   
     {(linkedin || github) && (
       <div className="w-3/4 h-px bg-gradient-to-r from-blue-500 via-gray-700 to-red-500 my-2 opacity-70 rounded-full" />
     )}
-    {/* Social Icons */}
+    
     {(linkedin || github) && (
       <div className="flex justify-center gap-6 mt-2 mb-2 w-full">
         {linkedin && (
