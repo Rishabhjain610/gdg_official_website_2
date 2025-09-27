@@ -36,7 +36,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20 text-white px-4 py-20 relative">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20 text-white px-2 py-20 relative overflow-hidden">
       
 
       <div className="max-w-6xl mx-auto relative z-10">
