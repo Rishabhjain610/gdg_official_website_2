@@ -93,16 +93,16 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="relative text-white">
+    <div className="relative text-white overflow-hidden">
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-red-900/8"></div>
-        <div className="absolute inset-0 bg-gradient-to-tl from-yellow-900/6 via-transparent to-green-900/8"></div>
+        
       </div>
 
-      <section className="relative min-h-screen flex items-center justify-center px-4 pt-20">
+      <section className="relative min-h-screen flex items-center justify-center px-2 pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20" />
 
-        <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center mt-5 lg:text-left">
             <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
               <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
@@ -432,7 +432,7 @@ const Page = () => {
               </div>
             </div>
 
-            {/* FAQ Item 2 */}
+            
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-red-500/20 overflow-hidden transition-all duration-300 hover:border-red-500/40">
               <button
                 onClick={() => {
@@ -486,7 +486,7 @@ const Page = () => {
               </div>
             </div>
 
-            {/* FAQ Item 3 */}
+            
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-yellow-500/20 overflow-hidden transition-all duration-300 hover:border-yellow-500/40">
               <button
                 onClick={() => {

@@ -390,16 +390,6 @@ const cards = [
   },
   // Design JCOM
   {
-    link: "Shriya Rane",
-    cover: "/teams/Shriya_Rane.jpg",
-    title: "DESIGN JCOM",
-    character: "/teams/Shriya.png",
-    alt: "Shriya Rane",
-    name: "Shriya Rane",
-    linkedin: "https://www.linkedin.com/in/shriya-rane-27236030b/",
-    github: "https://github.com/account4monazite",
-  },
-  {
     link: "Shreeya Satav",
     cover: "/teams/SHREEYA_SATAV.jpg",
     title: "DESIGN JCOM",
@@ -409,17 +399,18 @@ const cards = [
     linkedin: "https://www.linkedin.com/in/shreeya-satav-7a1226379/",
     github: "https://github.com/ShreeyaSS7",
   },
-  // Editorial JCOM
   {
-    link: "Rachit Sikchi",
-    cover: "/teams/Rachit_Sikchi.jpg",
-    title: "EDITORIAL JCOM",
-    character: "/teams/Rachit.png",
-    alt: "Rachit Sikchi",
-    name: "Rachit Sikchi",
-    linkedin: "https://www.linkedin.com/in/rachit-sikchi-ba709a356/",
-    github: "https://github.com/Robot207",
+    link: "Shriya Rane",
+    cover: "/teams/Shriya_Rane.jpg",
+    title: "DESIGN JCOM",
+    character: "/teams/Shriya.png",
+    alt: "Shriya Rane",
+    name: "Shriya Rane",
+    linkedin: "https://www.linkedin.com/in/shriya-rane-27236030b/",
+    github: "https://github.com/account4monazite",
   },
+
+  // Editorial JCOM
   {
     link: "Achal Verma",
     cover: "/teams/Achal_Verma.jpg",
@@ -430,6 +421,17 @@ const cards = [
     linkedin: "https://www.linkedin.com/in/achal-v-020b1a31b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     github: "https://github.com/4chlError",
   },
+  {
+    link: "Rachit Sikchi",
+    cover: "/teams/Rachit_Sikchi.jpg",
+    title: "EDITORIAL JCOM",
+    character: "/teams/Rachit.png",
+    alt: "Rachit Sikchi",
+    name: "Rachit Sikchi",
+    linkedin: "https://www.linkedin.com/in/rachit-sikchi-ba709a356/",
+    github: "https://github.com/Robot207",
+  },
+  
   // Operation JCOM
   {
     link: "Riya Ratnani",
@@ -442,16 +444,6 @@ const cards = [
     github: "https://github.com/riyaahhh",
   },
   {
-    link: "Vinayak Kumar Singh",
-    cover: "/teams/Vinayak_Kumar.jpg",
-    title: "OPERATION JCOM",
-    character: "/teams/Vinayak.png",
-    alt: "Vinayak Kumar Singh",
-    name: "Vinayak Kumar Singh",
-    linkedin: "https://www.linkedin.com/in/vinu-lucifer-1a0250384/",
-    github: "https://github.com/VinuLucifer",
-  },
-  {
     link: "Shreya Khandelwal",
     cover: "/teams/Shreya_Khandelwal.png",
     title: "OPERATION JCOM",
@@ -461,7 +453,28 @@ const cards = [
     linkedin: "https://www.linkedin.com/in/shreya-khandelwal-7a419b347/",
     github: "https://github.com/shreya18633",
   },
+  {
+    link: "Vinayak Kumar Singh",
+    cover: "/teams/Vinayak_Kumar.jpg",
+    title: "OPERATION JCOM",
+    character: "/teams/Vinayak.png",
+    alt: "Vinayak Kumar Singh",
+    name: "Vinayak Kumar Singh",
+    linkedin: "https://www.linkedin.com/in/vinu-lucifer-1a0250384/",
+    github: "https://github.com/VinuLucifer",
+  },
+  
   // Tech JCOM
+    {
+    link: "Bhoomi Sakhrani",
+    cover: "/teams/Bhoomi.jpg",
+    title: "TECH JCOM",
+    character: "/teams/Bhoomi_Sakhrani.png",
+    alt: "Bhoomi Sakhrani",
+    name: "Bhoomi Sakhrani",
+    linkedin: "https://www.linkedin.com/in/bhoomi-sakhrani/",
+    github: "https://github.com/itzBhoomi",
+  },
   {
     link: "Hammad Shaikh",
     cover: "/teams/Hammad_Shaikh.jpg",
@@ -471,17 +484,8 @@ const cards = [
     name: "Hammad Shaikh",
     linkedin: "https://www.linkedin.com/in/hammad-shaikh047/",
     github: "https://github.com/HammadShaikh-051",
-  },
-  {
-    link: "Bhoomi Sakhrani",
-    cover: "/teams/Bhoomi.jpg",
-    title: "TECH JCOM",
-    character: "/teams/Bhoomi_Sakhrani.png",
-    alt: "Rishabh Jain",
-    name: "Bhoomi Sakhrani",
-    linkedin: "https://www.linkedin.com/in/bhoomi-sakhrani/",
-    github: "https://github.com/itzBhoomi",
-  },
+  }
+
 ];
 
 const TeamsPage = () => {
