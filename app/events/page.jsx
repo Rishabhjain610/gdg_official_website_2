@@ -13,7 +13,7 @@ export default function EventsPage() {
       color: "bg-green-500",
       imgSrc: "/events/staytuned.jpeg", // your custom image path here
       details:
-        "A 48-hour non-stop hackathon bringing together the brightest minds to build, innovate, and collaborate. Teams will tackle real-world challenges across domains like AI, Web/App Dev, and more.",
+        "A 24-hour non-stop hackathon bringing together the brightest minds to build, innovate, and collaborate. Teams will tackle real-world challenges across various domains.",
     },
     {
       status: "UPCOMING",
