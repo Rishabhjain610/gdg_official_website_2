@@ -99,20 +99,18 @@ export function PulseCard({
         "group relative z-30 cursor-pointer overflow-hidden rounded-2xl flex flex-col items-center text-center",
         sizeConfig.padding,
         // Light mode styles
-        "bg-white/80 before:bg-gradient-to-b before:from-white/5 before:to-white/20 before:backdrop-blur-3xl",
-        "after:bg-gradient-to-b after:from-transparent after:via-transparent after:to-white/20",
+    
         // Dark mode styles
-        "dark:bg-black/5 dark:before:bg-gradient-to-b dark:before:from-black/5 dark:before:to-black/20",
-        "dark:after:to-black/20",
+        "bg-black before:bg-gradient-to-b before:from-black/5 before:to-black/20",
+        "after:to-black/20",
         // Common styles
         "before:absolute before:inset-0 before:rounded-[inherit] before:content-['']",
         "after:absolute after:inset-0 after:rounded-[inherit] after:content-['']",
         glowEffect && `hover:before:bg-${variantConfig.accent}/10`,
         // Shadows
-        "shadow-[0px_3px_8px_rgba(0,0,0,0.04),0px_12px_20px_rgba(0,0,0,0.08)]",
-        "hover:shadow-[0px_5px_15px_rgba(0,0,0,0.03),0px_25px_35px_rgba(0,0,0,0.2)]",
-        "dark:shadow-[0px_3px_8px_rgba(0,0,0,0.08),0px_12px_20px_rgba(0,0,0,0.15)]",
-        "dark:hover:shadow-[0px_5px_15px_rgba(0,0,0,0.06),0px_25px_35px_rgba(0,0,0,0.4)]",
+        
+        "shadow-[0px_3px_8px_rgba(0,0,0,0.08),0px_12px_20px_rgba(0,0,0,0.15)]",
+        "hover:shadow-[0px_5px_15px_rgba(0,0,0,0.06),0px_25px_35px_rgba(0,0,0,0.4)]",
         className
       )}
       style={{
@@ -149,17 +147,14 @@ export function PulseCard({
       >
         <span
           className={cn(
-            "absolute inset-0 items-center justify-center rounded-[inherit]",
-            "bg-gradient-to-b from-black/5 to-black/10 backdrop-blur-3xl",
-            "dark:from-white/10 dark:to-white/5",
-            "transition-all duration-300"
+            "absolute inset-0 items-center justify-center rounded-[inherit] bg-gray-700/20 transition-all duration-300"
           )}
         />
         <span
           className={cn(
             "relative z-1 block transition-colors duration-300",
-            "text-black/60 group-hover:text-[var(--card-color)]",
-            "dark:text-zinc-400",
+            "text-zinc-400 group-hover:text-[var(--card-color)]",
+           
             sizeConfig.iconSize
           )}
         >
@@ -172,8 +167,8 @@ export function PulseCard({
         <h3
           className={cn(
             "font-medium transition-colors duration-300",
-            "text-black/80 group-hover:text-[var(--card-color)]",
-            "dark:text-white/80",
+            " group-hover:text-[var(--card-color)]",
+            "text-white/80",
             sizeConfig.titleSize
           )}
         >
@@ -182,8 +177,8 @@ export function PulseCard({
         <p
           className={cn(
             "mt-1 transition-colors duration-300",
-            "text-black/60",
-            "dark:text-white/40",
+            
+            "text-white/40",
             sizeConfig.descSize
           )}
         >

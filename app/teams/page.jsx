@@ -2,7 +2,7 @@
 import React from "react";
 import Card from "../components/Card";
 import Image from "next/image";
-import Chatbot from "../components/Chatbot";
+
 const cards = [
   // Lead
   {
@@ -251,7 +251,7 @@ const TeamsPage = () => {
           <Card key={idx} {...card} />
         ))}
       </div>
-      <Chatbot/>
+     
     </div>
   );
 };

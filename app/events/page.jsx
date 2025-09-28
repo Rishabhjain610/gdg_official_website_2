@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Timeline } from "@/components/ui/timeline";
-import Chatbot from "../components/Chatbot";
+
 export default function EventsPage() {
   const events = [
     {
@@ -111,7 +111,7 @@ export default function EventsPage() {
           animate={controls}
           variants={variants}
           key={index}
-          className="dark:border-gray-700 rounded-xl p-6 shadow-sm bg-black/80 max-w-5xl mx-auto"
+          className="border-gray-700 rounded-xl p-6 shadow-sm bg-black/80 max-w-5xl mx-auto"
         >
           <h1
             className={`text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold mb-2 ${
@@ -126,7 +126,7 @@ export default function EventsPage() {
             {event.title}
           </h1>
 
-          <p className="text-sm sm:text-base md:text-lg text-gray-300 dark:text-gray-400 mb-4">
+          <p className="text-sm sm:text-base md:text-lg text-gray-400  mb-4">
             {event.date}
           </p>
 
@@ -147,7 +147,7 @@ export default function EventsPage() {
               className="w-auto h-auto sm:h-44 md:h-52 lg:h-60 rounded-lg object-cover shadow mb-4 sm:mb-0"
             />
 
-            <p className="text-gray-200 dark:text-gray-300 text-base sm:text-lg font-semibold leading-relaxed p-5">
+            <p className="text-gray-300  text-base sm:text-lg font-semibold leading-relaxed p-5">
               {event.details}
             </p>
           </div>
@@ -160,7 +160,7 @@ export default function EventsPage() {
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20">
       <div className="relative w-full overflow-clip px-4 py-12">
         <Timeline data={data} />
-        <Chatbot/>
+       
       </div>
     </section>
   );

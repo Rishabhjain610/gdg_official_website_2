@@ -312,7 +312,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <Chatbot/>
+     
       {/* Gallery */}
 
       <section className="relative py-20 px-4 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20 text-center sm:px-6 lg:px-8">
@@ -615,7 +615,7 @@ const Page = () => {
                   </button>
                 </Link>
 
-                <Link href="/teams" className="w-full sm:w-auto">
+                <Link href="https://gdg.community.dev/gdg-on-campus-thadomal-shahani-engineering-college-mumbai-india/" className="w-full sm:w-auto">
                   <button className="w-full border-2 border-white/20 hover:border-white/40 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:bg-white/5">
                     Join Community
                   </button>
@@ -625,6 +625,7 @@ const Page = () => {
           </motion.div>
         </div>
       </section>
+    
     </div>
   );
 };

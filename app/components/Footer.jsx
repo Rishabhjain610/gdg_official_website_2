@@ -14,7 +14,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative">
+    <footer className="relative z-10">
     
       <div className="border-t border-white/10 bg-black backdrop-blur-xl">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -134,7 +134,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/contact"
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm flex items-center gap-2"
                   >
                     <IoLocation size={16} />

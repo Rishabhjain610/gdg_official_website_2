@@ -6,10 +6,11 @@ import {
   IoLocationOutline,
   IoLogoLinkedin,
   IoSend,
+  IoLogoWhatsapp,
 } from "react-icons/io5";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Chatbot from "../components/Chatbot";
+
 const ContactPage = () => {
   const [status, setStatus] = useState("idle");
 
@@ -37,10 +38,7 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20 text-white px-2 py-20 relative overflow-hidden">
-      
-
       <div className="max-w-6xl mx-auto relative z-10">
-        
         <div className="text-center mb-12 mt-5">
           <div className="inline-flex items-center gap-2 bg-white/5 border border-white/20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm">
             <div className="flex gap-1">
@@ -68,9 +66,7 @@ const ContactPage = () => {
           </p>
         </div>
 
-        
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          
           <motion.div
             className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8"
             whileInView={{ opacity: 1, x: 0 }}
@@ -110,12 +106,25 @@ const ContactPage = () => {
                   <div className="text-red-300 text-sm">dsctsec@gmail.com</div>
                 </div>
               </Link>
+              <Link
+                href="https://chat.whatsapp.com/BsLBWWGIAcz379C9BSRuIM"
+                target="_blank"
+                className="flex items-center gap-4 p-4 rounded-2xl bg-green-500/10 border border-green-500/20 hover:bg-green-500/20 transition-all group"
+              >
+                <IoLogoWhatsapp className="text-green-400" size={20} />
+                <div>
+                  <div className="text-white font-semibold">WhatsApp Group</div>
+                  <div className="text-green-300 text-sm">
+                    Join our WhatsApp community
+                  </div>
+                </div>
+              </Link>
 
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-green-500/10 border border-green-500/20">
-                <IoLocationOutline className="text-green-400" size={20} />
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-yellow-500/10 border border-yellow-500/20 hover:bg-yellow-500/20 transition-all group">
+                <IoLocationOutline className="text-yellow-400" size={20} />
                 <div>
                   <div className="text-white font-semibold">Location</div>
-                  <div className="text-green-300 text-sm">
+                  <div className="text-yellow-300 text-sm">
                     TSEC, Bandra West, Mumbai
                   </div>
                 </div>
@@ -123,7 +132,6 @@ const ContactPage = () => {
             </div>
           </motion.div>
 
-          
           <motion.div
             className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8"
             whileInView={{ opacity: 1, x: 0 }}
@@ -133,7 +141,6 @@ const ContactPage = () => {
             <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              
               <input
                 type="hidden"
                 name="access_key"
@@ -193,7 +200,6 @@ const ContactPage = () => {
                 )}
               </button>
 
-            
               {status === "success" && (
                 <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-xl text-green-400 text-center">
                   ✅ Message sent successfully!
@@ -207,8 +213,8 @@ const ContactPage = () => {
             </form>
           </motion.div>
         </div>
-        <Chatbot/>
-       
+        
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -231,7 +237,7 @@ const ContactPage = () => {
             />
           </div>
         </motion.div>
-        <Chatbot/>
+        
       </div>
     </div>
   );
