@@ -10,9 +10,10 @@ import {
   IoCodeSlashOutline,
   IoTrophyOutline,
 } from "react-icons/io5";
-import Chatbot from './components/Chatbot'
+import Chatbot from "./components/Chatbot";
 import { PulseCard } from "./components/PulseCard";
 import { Zap, Target, Gem, Eye, Network as NetworkIcon } from "lucide-react";
+import { MinimalistGlassCard } from "./components/MinimalistGlassCard";
 import CircularGallery from "@/components/CircularGallery";
 import { motion } from "framer-motion";
 const Page = () => {
@@ -96,7 +97,6 @@ const Page = () => {
     <div className="relative text-white overflow-hidden">
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-red-900/8"></div>
-        
       </div>
 
       <section className="relative min-h-screen flex items-center justify-center px-2 pt-20">
@@ -171,7 +171,9 @@ const Page = () => {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">GDG TSEC</h3>
-                    <p className="text-white text-sm">Google Developer Groups</p>
+                    <p className="text-white text-sm">
+                      Google Developer Groups
+                    </p>
                     <p className="text-blue-300 text-xs">
                       Thadomal Shahani Engineering College
                     </p>
@@ -254,6 +256,21 @@ const Page = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             <motion.div
+              className="block lg:hidden"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <MinimalistGlassCard
+                icon={<Target />}
+                title="Mission"
+                description="Empower Students to learn and grow together."
+                variant="amber"
+                size="lg"
+              />
+            </motion.div>
+            <motion.div
+              className="hidden lg:block"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -267,7 +284,24 @@ const Page = () => {
                 glowEffect={true}
               />
             </motion.div>
+
+            {/* Values Card */}
             <motion.div
+              className="block lg:hidden"
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <MinimalistGlassCard
+                icon={<Gem />}
+                title="Values"
+                description="Guided by values driven by purpose."
+                variant="blue"
+                size="lg"
+              />
+            </motion.div>
+            <motion.div
+              className="hidden lg:block"
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -281,7 +315,24 @@ const Page = () => {
                 glowEffect={true}
               />
             </motion.div>
+
+            {/* Vision Card */}
             <motion.div
+              className="block lg:hidden"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <MinimalistGlassCard
+                icon={<Eye />}
+                title="Vision"
+                description="Build impactful projects and faster collaboration."
+                variant="emerald"
+                size="lg"
+              />
+            </motion.div>
+            <motion.div
+              className="hidden lg:block"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -295,7 +346,24 @@ const Page = () => {
                 glowEffect={true}
               />
             </motion.div>
+
+            {/* Network Card */}
             <motion.div
+              className="block lg:hidden"
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <MinimalistGlassCard
+                icon={<NetworkIcon />}
+                title="Network"
+                description="Build connections and grow together."
+                variant="rose"
+                size="lg"
+              />
+            </motion.div>
+            <motion.div
+              className="hidden lg:block"
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -312,7 +380,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-     
+
       {/* Gallery */}
 
       <section className="relative py-20 px-4 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20 text-center sm:px-6 lg:px-8">
@@ -421,8 +489,8 @@ const Page = () => {
                 <div className="px-6 pb-6">
                   <div className="border-t border-blue-500/20 pt-4">
                     <p className="text-gray-300 leading-relaxed">
-                      GDG TSEC is the Google Developer Groups chapter at Thadomal
-                      Shahani Engineering College. We're a community of
+                      GDG TSEC is the Google Developer Groups chapter at
+                      Thadomal Shahani Engineering College. We're a community of
                       passionate developers, designers, and tech enthusiasts who
                       come together to learn, build, and grow with Google's
                       latest technologies.
@@ -432,7 +500,6 @@ const Page = () => {
               </div>
             </div>
 
-            
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-red-500/20 overflow-hidden transition-all duration-300 hover:border-red-500/40">
               <button
                 onClick={() => {
@@ -486,7 +553,6 @@ const Page = () => {
               </div>
             </div>
 
-            
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-yellow-500/20 overflow-hidden transition-all duration-300 hover:border-yellow-500/40">
               <button
                 onClick={() => {
@@ -615,7 +681,10 @@ const Page = () => {
                   </button>
                 </Link>
 
-                <Link href="https://gdg.community.dev/gdg-on-campus-thadomal-shahani-engineering-college-mumbai-india/" className="w-full sm:w-auto">
+                <Link
+                  href="https://gdg.community.dev/gdg-on-campus-thadomal-shahani-engineering-college-mumbai-india/"
+                  className="w-full sm:w-auto"
+                >
                   <button className="w-full border-2 border-white/20 hover:border-white/40 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:bg-white/5">
                     Join Community
                   </button>
@@ -625,7 +694,6 @@ const Page = () => {
           </motion.div>
         </div>
       </section>
-    
     </div>
   );
 };
