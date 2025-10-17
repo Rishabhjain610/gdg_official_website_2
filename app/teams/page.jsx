@@ -7,9 +7,9 @@ const cards = [
   // Lead
   {
     link: "Ayush Kunder",
-    cover: "/teams/AYUSH_KUNDER.jpg",
+    cover: "/teams/Ayush_Kunder_Lead.jpg",
     title: "LEAD",
-    character: "/teams/AYUSH.png",
+    character: "/teams/Ayush_Kunder.png",
     alt: "Ayush Kunder",
     name: "Ayush Kunder",
     linkedin: "https://www.linkedin.com/in/ayushkunder/",
@@ -18,9 +18,9 @@ const cards = [
   // Cloud Head
   {
     link: "Dev Patel",
-    cover: "/teams/Dev_Patel.jpg",
+    cover: "/teams/Dev_Patel_Cloud_Head.jpg",
     title: "CLOUD HEAD",
-    character: "/teams/Dev.png",
+    character: "/teams/Dev_Patel.png",
     alt: "Dev Patel",
     name: "Dev Patel",
     linkedin: "https://www.linkedin.com/in/dev-patel-89250b353/",
@@ -40,9 +40,9 @@ const cards = [
   // Editorial Head
   {
     link: "Aarjav Jain",
-    cover: "/teams/Aarjav_Jain.jpg",
+    cover: "/teams/Aarjav_Editorial_Head.jpeg",
     title: "EDITORIAL HEAD",
-    character: "/teams/Aarjav.png",
+    character: "/teams/Aarjav_Editorial.png",
     alt: "Aarjav Jain",
     name: "Aarjav Jain",
     linkedin: "https://www.linkedin.com/in/aarjav-jain-b4b909264",
@@ -51,9 +51,9 @@ const cards = [
   // Operation Head
   {
     link: "Aditya Rajpal",
-    cover: "/teams/Aditya_Rajpal.jpg",
+    cover: "/teams/Aditya_Rajpal_Operations_head.jpg",
     title: "OPERATION HEAD",
-    character: "/teams/Aditya.png",
+    character: "/teams/Aditya_Rajpal.png",
     alt: "Aditya Rajpal",
     name: "Aditya Rajpal",
     linkedin: "https://www.linkedin.com/in/aditya-rajpal-atg77/",
@@ -73,9 +73,9 @@ const cards = [
   // Design SCOM
   {
     link: "Gunjan Shambwani",
-    cover: "/teams/GUNJAN_SHAMBWANI.jpg",
+    cover: "/teams/GUNJAN_SHAMBWANI_SCOM_DESIGN.jpg",
     title: "DESIGN SCOM",
-    character: "/teams/GUNJAN.png",
+    character: "/teams/GUNJAN_SHAMBWANI.png",
     alt: "Gunjan Shambwani",
     name: "Gunjan Shambwani",
     linkedin: "https://www.linkedin.com/in/gunjan-shambwani-32457a340/",
@@ -84,9 +84,9 @@ const cards = [
   // Editorial SCOM
   {
     link: "Aarya Patil",
-    cover: "/teams/Aarya_Patil.jpeg",
+    cover: "/teams/Aarya_Patil_Editorial_SCOM.png",
     title: "EDITORIAL SCOM",
-    character: "/teams/Aarya.png",
+    character: "/teams/Aarya_Patil.png",
     alt: "Aarya Patil",
     name: "Aarya Patil",
     linkedin: "https://www.linkedin.com/in/aarya-patil-526762335/",
@@ -95,9 +95,9 @@ const cards = [
   // Operation SCOM
   {
     link: "Darshil Rathod",
-    cover: "/teams/Darshil_Rathod.jpg",
+    cover: "/teams/DarshilRathod_Scom_operations.jpg",
     title: "OPERATION SCOM",
-    character: "/teams/Darshil.png",
+    character: "/teams/DarshilRathod.png",
     alt: "Darshil Rathod",
     name: "Darshil Rathod",
     linkedin: "https://in.linkedin.com/in/darshil-rathod-47a417384",
@@ -105,9 +105,9 @@ const cards = [
   },
   {
     link: "Ved Dange",
-    cover: "/teams/VED_DANGE.jpg",
+    cover: "/teams/VED_DANGE_SCOM.jpg",
     title: "OPERATION SCOM",
-    character: "/teams/VED.png",
+    character: "/teams/VED_DANGE.png",
     alt: "Ved Dange",
     name: "Ved Dange",
     linkedin: "https://www.linkedin.com/in/veddange/",
@@ -116,7 +116,7 @@ const cards = [
   // Tech SCOM
   {
     link: "Rishabh Jain",
-    cover: "/teams/Rishabh_Jain.jpg",
+    cover: "/teams/Rishabh_Jain_SCOM_Tech.jpg",
     title: "TECH SCOM",
     character: "/teams/Rishabh_Jain.png",
     alt: "Rishabh Jain",
@@ -126,9 +126,9 @@ const cards = [
   },
   {
     link: "Yashas Vaddi",
-    cover: "/teams/Yashas_Vaddi.jpg",
+    cover: "/teams/Yashas_vaddi_SCOM.png",
     title: "TECH SCOM",
-    character: "/teams/Yashas.png",
+    character: "/teams/Yashas_vaddi.png",
     alt: "Yashas Vaddi",
     name: "Yashas Vaddi",
     linkedin: "https://www.linkedin.com/in/yashasvaddi/",
@@ -137,9 +137,9 @@ const cards = [
   // Design JCOM
   {
     link: "Shreeya Satav",
-    cover: "/teams/SHREEYA_SATAV.jpg",
+    cover: "/teams/Shreeya_Satav_JCOM_DESIGN.jpg",
     title: "DESIGN JCOM",
-    character: "/teams/SHREEYA.png",
+    character: "/teams/Shreeya_Satav.png",
     alt: "Shreeya Satav",
     name: "Shreeya Satav",
     linkedin: "https://www.linkedin.com/in/shreeya-satav-7a1226379/",
@@ -147,9 +147,9 @@ const cards = [
   },
   {
     link: "Shriya Rane",
-    cover: "/teams/Shriya_Rane.jpg",
+    cover: "/teams/Shriya_Rane_JCOM_DESIGN.jpg",
     title: "DESIGN JCOM",
-    character: "/teams/Shriya.png",
+    character: "/teams/Shriya_Rane.png",
     alt: "Shriya Rane",
     name: "Shriya Rane",
     linkedin: "https://www.linkedin.com/in/shriya-rane-27236030b/",
@@ -159,9 +159,9 @@ const cards = [
   // Editorial JCOM
   {
     link: "Achal Verma",
-    cover: "/teams/Achal_Verma.jpg",
+    cover: "/teams/Achal_Verma_JCOM_EDITORIAL.jpg",
     title: "EDITORIAL JCOM",
-    character: "/teams/Achal.png",
+    character: "/teams/Achal_Verma.png",
     alt: "Achal Verma",
     name: "Achal Verma",
     linkedin: "https://www.linkedin.com/in/achal-v-020b1a31b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -169,9 +169,9 @@ const cards = [
   },
   {
     link: "Rachit Sikchi",
-    cover: "/teams/Rachit_Sikchi.jpg",
+    cover: "/teams/Rachit_Sikchi_JCOM_Editorial.jpg",
     title: "EDITORIAL JCOM",
-    character: "/teams/Rachit.png",
+    character: "/teams/Rachit_Sikchi.png",
     alt: "Rachit Sikchi",
     name: "Rachit Sikchi",
     linkedin: "https://www.linkedin.com/in/rachit-sikchi-ba709a356/",
@@ -181,9 +181,9 @@ const cards = [
   // Operation JCOM
   {
     link: "Riya Ratnani",
-    cover: "/teams/Riya_Ratnani.jpg",
+    cover: "/teams/Riya_Ratnani_operations_JCOM.jpg",
     title: "OPERATION JCOM",
-    character: "/teams/Riya.png",
+    character: "/teams/Riya_Ratnani.png",
     alt: "Riya Ratnani",
     name: "Riya Ratnani",
     linkedin: "https://www.linkedin.com/in/riya-ratnani-b45163326/",
@@ -191,7 +191,7 @@ const cards = [
   },
   {
     link: "Shreya Khandelwal",
-    cover: "/teams/Shreya_Khandelwal.png",
+    cover: "/teams/Shreya_Khandelwal.jpeg",
     title: "OPERATION JCOM",
     character: "/teams/Shreya.png",
     alt: "Shreya Khandelwal",
@@ -201,7 +201,7 @@ const cards = [
   },
   {
     link: "Vinayak Kumar Singh",
-    cover: "/teams/Vinayak_Kumar.jpg",
+    cover: "/teams/Vinayak_operations_JCOM.jpg",
     title: "OPERATION JCOM",
     character: "/teams/Vinayak.png",
     alt: "Vinayak Kumar Singh",
@@ -213,9 +213,9 @@ const cards = [
   // Tech JCOM
     {
     link: "Bhoomi Sakhrani",
-    cover: "/teams/Bhoomi.jpg",
+    cover: "/teams/BhoomiSakhrani_Tech_JCOM.jpg",
     title: "TECH JCOM",
-    character: "/teams/Bhoomi_Sakhrani.png",
+    character: "/teams/BhoomiSakhrani.png",
     alt: "Bhoomi Sakhrani",
     name: "Bhoomi Sakhrani",
     linkedin: "https://www.linkedin.com/in/bhoomi-sakhrani/",
@@ -223,9 +223,9 @@ const cards = [
   },
   {
     link: "Hammad Shaikh",
-    cover: "/teams/Hammad_Shaikh.jpg",
+    cover: "/teams/Hammad_Shaikh_JCOM_Tech.jpg",
     title: "TECH JCOM",
-    character: "/teams/Hammad.png",
+    character: "/teams/Hammad_Shaikh.png",
     alt: "Hammad Shaikh",
     name: "Hammad Shaikh",
     linkedin: "https://www.linkedin.com/in/hammad-shaikh047/",
