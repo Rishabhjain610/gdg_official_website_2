@@ -18,7 +18,7 @@ const cards = [
   // Cloud Head
   {
     link: "Dev Patel",
-    cover: "/teams/Dev_Patel_Cloud_Head.jpg",
+    cover: "/teams/Dev_Patel_Cloud_Head.JPG",
     title: "CLOUD HEAD",
     character: "/teams/Dev_Patel.png",
     alt: "Dev Patel",
@@ -51,7 +51,7 @@ const cards = [
   // Operation Head
   {
     link: "Aditya Rajpal",
-    cover: "/teams/Aditya_Rajpal_Operations_head.jpg",
+    cover: "/teams/Aditya_Rajpal_Operations_head.JPG",
     title: "OPERATION HEAD",
     character: "/teams/Aditya_Rajpal.png",
     alt: "Aditya Rajpal",
@@ -84,7 +84,7 @@ const cards = [
   // Editorial SCOM
   {
     link: "Aarya Patil",
-    cover: "/teams/Aarya_Patil_Editorial_SCOM.png",
+    cover: "/teams/Aarya_Patil_Editorial_SCOM.PNG",
     title: "EDITORIAL SCOM",
     character: "/teams/Aarya_Patil.png",
     alt: "Aarya Patil",
@@ -105,7 +105,7 @@ const cards = [
   },
   {
     link: "Ved Dange",
-    cover: "/teams/VED_DANGE_SCOM.jpg",
+    cover: "/teams/VED_DANGE_SCOM.JPG",
     title: "OPERATION SCOM",
     character: "/teams/VED_DANGE.png",
     alt: "Ved Dange",
@@ -201,7 +201,7 @@ const cards = [
   },
   {
     link: "Vinayak Kumar Singh",
-    cover: "/teams/Vinayak_operations_JCOM.jpg",
+    cover: "/teams/Vinayak_operations_JCOM.JPG",
     title: "OPERATION JCOM",
     character: "/teams/Vinayak.png",
     alt: "Vinayak Kumar Singh",
@@ -213,7 +213,7 @@ const cards = [
   // Tech JCOM
     {
     link: "Bhoomi Sakhrani",
-    cover: "/teams/BhoomiSakhrani_Tech_JCOM.jpg",
+    cover: "/teams/BhoomiSakhrani_Tech_JCOM.JPG",
     title: "TECH JCOM",
     character: "/teams/BhoomiSakhrani.png",
     alt: "Bhoomi Sakhrani",
@@ -223,7 +223,7 @@ const cards = [
   },
   {
     link: "Hammad Shaikh",
-    cover: "/teams/Hammad_Shaikh_JCOM_Tech.jpg",
+    cover: "/teams/Hammad_Shaikh_JCOM_Tech.JPG",
     title: "TECH JCOM",
     character: "/teams/Hammad_Shaikh.png",
     alt: "Hammad Shaikh",
