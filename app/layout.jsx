@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "GDG TSEC Official Website",
+  title: "GDG TSEC",
   description: "Google Developer Group at Thadomal Shahani Engineering College",
   icons: {
     icon: "/Logo.png",
