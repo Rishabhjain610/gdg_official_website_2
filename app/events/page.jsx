@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Timeline } from "@/components/ui/timeline";
@@ -92,72 +91,7 @@ export default function EventsPage() {
     },
   };
 
-  // Map events to timeline data with motion divs
-  // const data = events.map((event, index) => {
-  //   const controls = useAnimation();
-  //   const ref = useRef(null);
-  //   const isInView = useInView(ref, { once: true, margin: "-100px" }); // Trigger a bit before fully in view
 
-  //   useEffect(() => {
-  //     if (isInView) {
-  //       controls.start("visible");
-  //     }
-  //   }, [isInView, controls]);
-
-  //   return {
-  //     key: index,
-  //     content: (
-  //       <motion.div
-  //         ref={ref}
-  //         initial="hidden"
-  //         animate={controls}
-  //         variants={variants}
-  //         key={index}
-  //         className="border-gray-700 rounded-xl p-6 shadow-sm bg-black/80 max-w-5xl mx-auto"
-  //       >
-          
-  //         <h1
-  //           className={`text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold mb-2 ${
-  //             [
-  //               "text-red-500",
-  //               "text-blue-500",
-  //               "text-yellow-300",
-  //               "text-green-500",
-  //             ][index % 4]
-  //           }`}
-  //         >
-  //           {event.title}
-  //         </h1>
-
-  //         <p className="text-sm sm:text-base md:text-lg text-gray-400  mb-4">
-  //           {event.date}
-  //         </p>
-
-  //         <span
-  //           className={`inline-block px-3 py-1 mb-6 text-xs sm:text-sm font-semibold text-white rounded-full ${
-  //             event.status === "UPCOMING" ? "bg-green-600" : "bg-blue-600"
-  //           }`}
-  //         >
-  //           {event.status}
-  //         </span>
-
-  //         <div className="flex flex-col  lg:flex-row">
-  //           <img
-  //             src={event.imgSrc}
-  //             alt={`Image for ${event.title}`}
-  //             width={500}
-  //             height={500}
-  //             className="w-auto h-auto sm:h-44 md:h-52 lg:h-60 rounded-lg object-cover shadow mb-4 sm:mb-0"
-  //           />
-
-  //           <p className="text-gray-300  text-base sm:text-lg font-semibold leading-relaxed p-5">
-  //             {event.details}
-  //           </p>
-  //         </div>
-  //       </motion.div>
-  //     ),
-  //   };
-  // });
   const data = events.map((event, index) => {
   const controls = useAnimation();
   const ref = useRef(null);
