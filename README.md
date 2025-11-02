@@ -63,3 +63,4 @@ For any inquiries or feedback, feel free to reach out:
 ---
 
 Made with ❤️ by **GDG TSEC**.
+updates in readme
