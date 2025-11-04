@@ -1,6 +1,6 @@
 export default function sitemap() {
   const base = "https://gdgtsecoffical.dpdns.org";
-  const now = new Date();
+  const now = new Date().toISOString();
   const pages = ["/", "/events", "/teams", "/sponsors", "/contact"];
 
   return pages.map((p) => ({

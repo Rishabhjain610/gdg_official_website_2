@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Timeline } from "@/components/ui/timeline";
-
+import Script from "next/script";
 export default function EventsPage() {
   const events = [
     {
@@ -161,11 +161,46 @@ export default function EventsPage() {
 });
 
   return (
+    <>
+    <Script
+        id="events-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": events.map((event, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "Event",
+                "name": event.title,
+                "description": event.details,
+                "startDate": event.date,
+                "eventStatus": event.status === "UPCOMING" 
+                  ? "https://schema.org/EventScheduled" 
+                  : "https://schema.org/EventPast",
+                "location": {
+                  "@type": "Place",
+                  "name": "Thadomal Shahani Engineering College",
+                  "address": "Mumbai, India"
+                },
+                "image": `https://gdgtsecoffical.dpdns.org${event.imgSrc}`,
+                "organizer": {
+                  "@type": "Organization",
+                  "name": "GDG TSEC"
+                }
+              }
+            }))
+          })
+        }}
+      />
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900/20 via-transparent to-red-900/20">
       <div className="relative w-full overflow-clip px-4 py-12">
         <Timeline data={data} />
        
       </div>
     </section>
+    </>
   );
 }
