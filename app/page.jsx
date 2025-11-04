@@ -125,9 +125,11 @@ const Page = () => {
             <div className="bg-white/10 rounded-3xl w-full sm:w-[500px] p-3 py-6 sm:p-5 sm:gap-4 items-center mb-8 flex  sm:flex-row backdrop-blur-sm">
               <img
                 src="/Logo.png"
+                
                 alt="GDG TSEC Banner"
                 className="w-[80px] h-[40px] sm:w-[90px] sm:h-[50px] "
               />
+              
               <div className="">
                 <h1 className="text-[18px] sm:text-[25px]">
                   Google Developer Groups

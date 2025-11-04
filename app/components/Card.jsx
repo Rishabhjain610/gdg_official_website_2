@@ -16,14 +16,14 @@ const Card = ({
   
       <div className="card">
         <div className="wrapper">
-          <img src={cover} alt={`${alt} cover`} className="cover-image" />
+          <Image src={cover} alt={`${alt} cover`} className="cover-image" />
         </div>
         {name && (
           <div className="absolute bottom-4   px-3 py-1 rounded text-white font-bold text-lg z-10">
             {name}
           </div>
         )}
-        <img src={character} alt={`${alt} character`} className="character" />
+        <Image src={character} alt={`${alt} character`} className="character" />
       </div>
     
     
