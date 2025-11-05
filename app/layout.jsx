@@ -1,16 +1,19 @@
-
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ClientLayoutWrapper from "./components/ClientLayoutWrapper";
 import Script from "next/script";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata = {
   metadataBase: new URL("https://gdgtsecoffical.dpdns.org"),
   title: { default: "GDG TSEC", template: "%s | GDG TSEC" },
-  description: "Google Developer Groups – TSEC. Learn, build, grow with GDG TSEC.",
+  description:
+    "Google Developer Groups – TSEC. Learn, build, grow with GDG TSEC.",
   keywords: ["GDG", "Google Developer Groups", "TSEC", "Hackathon", "Hacksync"],
   authors: [{ name: "GDG TSEC" }],
   creator: "GDG TSEC",
@@ -19,7 +22,8 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    googleBot:
+      "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1",
   },
   openGraph: {
     type: "website",
@@ -36,6 +40,9 @@ export const metadata = {
     images: ["/og.png"],
   },
   manifest: "/site.webmanifest",
+  verification: {
+    google: "TtCVRJScD-UOsCl5zgJf3NL2maM07UtsS2-WAKXzDao",
+  },
 };
 
 // Add this new export
@@ -46,10 +53,14 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
 
-        <Script id="ld-org" type="application/ld+json"
+        <Script
+          id="ld-org"
+          type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -59,12 +70,14 @@ export default function RootLayout({ children }) {
               logo: "https://gdgtsecoffical.dpdns.org/Logo.png",
               sameAs: [
                 "https://www.linkedin.com/company/gdg-tsec/",
-                "https://chat.whatsapp.com/BsLBWWGIAcz379C9BSRuIM"
+                "https://chat.whatsapp.com/BsLBWWGIAcz379C9BSRuIM",
               ],
             }),
           }}
         />
-        <Script id="ld-website" type="application/ld+json"
+        <Script
+          id="ld-website"
+          type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
