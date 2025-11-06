@@ -163,7 +163,7 @@ const Page = () => {
               </span>
             </div>
 
-            <div className="bg-white/10 rounded-3xl w-full sm:w-[500px] p-3 py-6 sm:p-5 sm:gap-4 items-center mb-8 flex  sm:flex-row backdrop-blur-sm">
+            <div className="bg-white/10 rounded-3xl w-full sm:w-[500px] p-3 py-6 sm:p-5 sm:gap-4 items-center mb-8 flex  sm:flex-row backdrop-blur-sm gap-5">
               <img
                 src="/Logo.png"
                 
@@ -175,7 +175,7 @@ const Page = () => {
                 <h1 className="text-[18px] sm:text-[25px]">
                   Google Developer Groups
                 </h1>
-                <h1 className="text-blue-300 text-[4px] sm:text-lg">
+                <h1 className="text-blue-300 text-[13px] sm:text-lg">
                   Thadomal Shahani Engineering College
                 </h1>
               </div>
